@@ -1,0 +1,222 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    color: #fff;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+}
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.row{
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+/* ===================================
+    Typography
+====================================== */
+
+/* font family */
+.alt-font {font-family: "Oswald",sans-serif;}
+.main-font {font-family: 'Open Sans', sans-serif;}
+
+
+/* ===================================
+    Navigation
+====================================== */
+
+nav {
+  width: 100%;
+  top: 0px;
+  z-index: 99;
+}
+
+nav .container{ display: table-cell; vertical-align: middle; height: 80px; position: relative;}
+.sticky-nav{ position: fixed; top: 0px; display: inline-table;} /*inline-level table*/
+.logo { max-width: 200px; }
+.sticky-nav .logo { height: 100px; vertical-align: middle; display: table-cell;} /*Aligns logo to table */
+/* Nav bar items' default bottom border */
+.navbar-default .navbar-nav > li > a{
+  color: #fff;
+}
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus{
+  border-bottom: 2px solid #626262 !important;
+  color: #000;
+}
+.navbar-default {
+  background:transparent;  /* change upon scroll */
+  border-bottom:0px;
+}
+/* TODO: Add JS for scroll nav */
+.navbar.scroll {	min-height: 70px;}
+.navbar-default.scroll {	border-bottom: 1px solid #555;	background-color: #333;}
+
+/* ===================================
+    Home Page
+====================================== */
+
+.container {
+  width: 100%;
+  padding-right: 0;
+
+}
+
+section{
+  min-height: 650px;
+}
+
+.signature {
+  z-index: 1;
+  left: 35px;
+}
+
+svg {
+  position: absolute;
+  top: 500px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+path {
+  stroke-dasharray: 25000;
+  animation: draw 4s reverse 3;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 0;
+  } to {
+    stroke-dashoffset: 25000;
+  }
+}
+
+/* ===================================
+    Other Pages
+====================================== */
+
+
+.main_img {
+  width: 100%;
+  padding: 0;
+}
+.padding-top-60{
+  padding: 60px 0;
+}
+
+#home { z-index: 5;
+  background-color: #FA9883;
+  background: -webkit-linear-gradient(left, #EF3F56, #FA9883);
+  background: -webkit-linear-gradient(left, #EF3F56, #FA9883); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #EF3F56, #FA9883); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #EF3F56, #FA9883); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #EF3F56, #FA9883); /* Standard syntax (must be last) */
+} /*Desire to Peach*/
+#about {
+  background-color: #A41545;
+  background: -webkit-linear-gradient(left, #96445F, #4d173c);
+  background: -webkit-linear-gradient(left, #96445F, #4d173c); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #96445F, #4d173c); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #96445F, #4d173c); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #96445F, #4d173c); /* Standard syntax (must be last) */
+} /*Peach to Wine*/
+#skills {
+  padding: 60px 0;
+  background-color:#4d173c;
+  background: -webkit-linear-gradient(left, #EF3F56, #FA9883);
+  background: -webkit-linear-gradient(left, #EF3F56, #FA9883); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #EF3F56, #FA9883); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #EF3F56, #FA9883); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #EF3F56, #FA9883); /* Standard syntax (must be last) */
+} /*Eggplant*/
+#portfolio {
+  padding: 60px 0;
+  background-color:#854F4E;
+  background: -webkit-linear-gradient(left, #96445F, #4d173c);
+  background: -webkit-linear-gradient(left, #96445F, #4d173c); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #96445F, #4d173c); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #96445F, #4d173c); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #96445F, #4d173c); /* Standard syntax (must be last) */
+} /*Brown*/
+#contact {
+  background-color:#EF3F56;
+  background: -webkit-linear-gradient(left, #EF3F56, #FA9883);
+  background: -webkit-linear-gradient(left, #EF3F56, #FA9883); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #EF3F56, #FA9883); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #EF3F56, #FA9883); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #EF3F56, #FA9883); /* Standard syntax (must be last) */
+} /*Peach to Wine*/
+
+.personal-name h1 {font-size:45px; letter-spacing:3px; line-height: 50px;}
+.title-number {color: #fff; display: block; font-size: 55px; font-weight: 100; margin-bottom: 25px; left: -1px; letter-spacing: -2px; position:relative }
+.margin-six{ margin-top:10%; margin-bottom:10%}
+.section-title{ text-transform: uppercase; font-weight: 500; font-size: 30px; letter-spacing: 1px; padding: 0 0 0px 0;}
+.text-large { font-size: 20px; line-height: 30px; letter-spacing: 2px;}
+.highlight-button { display: inline-block; padding: 8px 20px 9px; font-size: 20px; background-color: #fac3a4;   }
+img.img-responsive { display: table-cell; max-width: 100%; }
+.medium-icon {
+    font-size: 50px;
+	color: #fff;
+    margin-bottom: 10px;
+}
+.section-icon {
+    font-size: 40px;
+	font-weight: bold;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	background-color: #fff;
+	width: 80px;
+    height: 80px;
+	padding: 15px;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+/* Float */
+.float-left { float:left}
+.float-right{ float:right}
+.no-float { float:none;}
+
+/* Form */
+input, textarea { border: 1px solid #dfdfdf; letter-spacing: 1px; font-size: 11px;  padding: 8px 15px; width: 100%; margin: 0 0 20px 0; text-transform: uppercase; max-width: 100%; resize: none;}
+input[type="submit"] { width: auto}
+input[type="button"], input[type="text"], input[type="email"], input[type="search"], input[type="password"], textarea, input[type="submit"] { -webkit-appearance: none;  border-radius: 0; }
+input:focus, textarea:focus{ border: 1px solid #989898; }
+input[type="submit"]:focus { border:none !important}
+.no-margin{ margin:0 !important}
+.no-padding{ padding:0 !important}
+#contact textarea { min-height: 150px}
+#contact .btn {	margin: 0;}
+.btn:hover {border: 2px solid #000; color: #000; background-color: transparent}
+
+.social-links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.social-links {
+    background-color: #4d173c;
+    padding: 40px 0;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.copyright {
+	background-color: #4d173c;
+}
