@@ -4,8 +4,11 @@ $(document).ready(function(){
       scroll_start = $(this).scrollTop();
       if (scroll_start > 60) {
         $(".right-nav").css("background-color", "rgba(77,23,60, 0.3)");
+        $(".logo").css("background-color", "rgba(77,23,60, .75)");
+        $(".logo-background").css("stroke", "#FA9883");
       } else {
         $(".right-nav").css("background-color", "transparent");
+        $(".logo").css("background-color", "transparent");
       };
     });
 });

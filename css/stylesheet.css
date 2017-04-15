@@ -66,39 +66,146 @@ nav .container{ display: table-cell; vertical-align: middle; height: 80px; posit
 .container {
   width: 100%;
   padding-right: 0;
-
 }
 
 section{
   min-height: 650px;
 }
 
-.signature {
+.signature-div {
   z-index: 1;
-  left: 35px;
 }
 
 .signature-svg {
   position: absolute;
-  top: 500px;
+  padding-left: 3px;
+  top: 750px;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
 }
 
-path {
-  stroke-dasharray: 25000;
-  animation: draw 4s reverse 3;
+.signature-path {
+  stroke-dasharray: 59000;
+  animation: draw_signature 4s reverse 1;
 }
 
-@keyframes draw {
+@keyframes draw_signature {
+  from {
+    stroke-dashoffset: 0;
+  } to {
+    stroke-dashoffset: 59000;
+  }
+}
+
+.logo-background {
+  stroke-dasharray: 54500;
+  stroke: #4d173c;
+  animation: draw_logo 4s reverse 1;
+}
+
+.initials {
+  opacity: 0;
+  stroke: #fff;
+}
+
+.initials {
+  stroke-dasharray: 54500;
+  animation: draw_initials 4s 3s reverse 1 forwards;
+}
+
+@keyframes draw_logo {
+  from {
+    stroke-dashoffset: 0;
+  } to {
+    stroke-dashoffset: 54500;
+  }
+}
+
+@keyframes draw_initials {
+  from {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  to {
+    stroke-dashoffset: 54500;
+    opacity: 1;
+  }
+}
+
+.flower-path {
+  stroke-dasharray: 25000;
+  animation: draw_flowers 4s reverse 1;
+}
+
+@keyframes draw_flowers {
   from {
     stroke-dashoffset: 0;
   } to {
     stroke-dashoffset: 25000;
   }
 }
+
+.flower-path {
+  transition: 300ms all;
+  transform-origin: 50% 50%;
+}
+
+
+.left-flower-fill, .middle-flower-fill {
+  fill-opacity: 0;
+  fill: url(#leftGradient);
+}
+
+.right-flower-fill {
+  fill-opacity: 0;
+  fill: url(#rightGradient);
+}
+
+.left-flower-top, .middle-flower-top, .right-flower-top {
+  stroke: #fff;
+  stroke-width: 10;
+}
+
+.left-flower-bottom, .middle-flower-bottom, .right-flower-bottom {
+  stroke: #fff;
+  stroke-width: 10;
+}
+
+#left-flower:hover {
+  transform: scale(1.2) translate(-30%, -40%);
+}
+
+#middle-flower:hover {
+  transform: scale(1.2) translate(-30%, -30%);
+}
+
+#right-flower:hover {
+  transform: scale(1.2) translate(-33%, -35%);
+}
+
+#left-flower:hover .left-flower-fill,
+#middle-flower:hover .middle-flower-fill,
+#right-flower:hover .right-flower-fill{
+  fill-opacity: 1;
+}
+
+#left-flower:hover .left-flower-top,
+#middle-flower:hover .middle-flower-top,
+#right-flower:hover .right-flower-top{
+  stroke: #EF3F56;
+  stroke-width: 15px;
+}
+
+#left-flower:hover .left-flower-bottom,
+#middle-flower:hover .middle-flower-bottom,
+#right-flower:hover .right-flower-bottom{
+  stroke: #FA9883;
+  stroke-width: 2;
+}
+
+
 
 /* ===================================
     Other Pages
