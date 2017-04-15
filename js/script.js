@@ -9,8 +9,26 @@ $(document).ready(function(){
       } else {
         $(".right-nav").css("background-color", "transparent");
         $(".logo").css("background-color", "transparent");
+        $(".logo-background").css("stroke", "#4d173c");
       };
     });
+
+
+  $(document).on('click', 'a', function(event){
+      event.preventDefault();
+
+      $('html, body').animate({
+          scrollTop: $( $.attr(this, 'href') ).offset().top
+      }, 500);
+      $('.down-arrow span').removeClass("run-animation");
+      $('.up-arrow span').removeClass("run-animation");
+      void $('.down-arrow span').offset();
+      void $('.up-arrow span').offset();
+      $('.down-arrow span').addClass("run-animation");
+      $('.up-arrow span').addClass("run-animation");
+
+  });
+
 });
 
 function fly() {
