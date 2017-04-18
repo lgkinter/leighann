@@ -453,6 +453,9 @@ input[type="submit"]:focus { border:none !important}
 ====================================== */
 
 .svg--icon {
+  position: relative;
+  z-index: -1;
+  pointer-events: none;
   width: 100%;
   max-width: 5rem;
   height: 100%;
@@ -493,6 +496,21 @@ input[type="submit"]:focus { border:none !important}
     fill: #4d173c;
 }
 
+a.circle_border {
+ position: relative;
+ display: block;
+ z-index: 1;
+}
+
+a.circle_border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+}
+
 /* ===================================
     Send Message Button Animation
 ====================================== */
@@ -500,6 +518,8 @@ input[type="submit"]:focus { border:none !important}
 #contactform {
   width: 90%;
   margin: auto;
+  font-size: 16px;
+  color: black;
 }
 
 #box {
@@ -603,4 +623,53 @@ input[type="submit"]:focus { border:none !important}
 
 .copyright {
 	background-color: #4d173c;
+}
+
+
+/* ===================================
+    Skills Chart
+====================================== */
+
+#skills-info-wrapper {
+
+}
+
+#skills-info {
+  width: 300px;
+  height: 400px;
+  margin-top: 150px;
+  background: rgba(77,23,60, 0.5);
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+}
+
+.skills-path {
+  stroke: #fff;
+  fill-rule: evenodd;
+}
+
+text {
+    font-size: 12px;
+    font-family: "Open Sans";
+    font-weight: normal;
+    pointer-events: none;
+    fill: white;
+}
+
+.skills-svg {
+    margin: auto;
+}
+
+.highlighted-path {
+  fill: orange!important;
+  opacity: 1!important;
+}
+
+.highlighted-text {
+  fill: black!important;
+}
+
+.hidden {
+  visibility: hidden;
 }

@@ -1,0 +1,175 @@
+{
+ "name": "Skills",
+ "children": [
+  {
+   "name": "Management & Comm...",
+   "children": [
+     {
+      "name": "Public Speaking",
+      "description": "Traveled to various client offices across the US to present to employees about their retirement and equity plans as well as savings strategies",
+      "years": "2015 - 2016",
+      "size": 50
+     },
+    {
+     "name": "Project Management",
+     "description": "Managed large (up to $1M) custom web application projects, such as total rewards and wealth accumulation statements, retirement projection tools and financial transactional sites",
+     "years": "2008 - 2016",
+     "size": 450
+    },
+    {
+     "name": "Client Management",
+     "description": "Served as the primary point of contact for multiple client relationships, listening to the current initiatives and challenges faced by our clients and discussed strategic and demographic implications related to the plan redesign, strategy, administration and financing of their employee benefit programs",
+     "years": "2008 - 2016",
+     "size": 300
+    },
+    {
+     "name": "People Management",
+     "children": [
+      {
+        "name": "Staffing",
+        "description": "Managed the staffing of all projects across our East Coast regional offices: Boston, New York and Raleigh",
+        "years": "2014 - 2016",
+        "size": 150
+      },
+      {
+        "name": "People Manager",
+        "description": "Held monthly 1-on-1 meetings to discuss workload management, career development, educational goals and performance improvement",
+        "years": "2014 - 2016",
+        "size": 75
+      },
+      {
+        "name": "Recruitment",
+        "description": "Supported leadership in attracting, developing and retaining talent by directing recruitment efforts, reviewing resumes and presenting at colleges and career fairs",
+        "years": "2008 - 2016",
+        "size": 25
+      }
+     ]
+    }]
+  },
+  {
+    "name": "Knowledge",
+    "children": [
+      {
+       "name": "Mathematics",
+       "description": "Graduated with honors in mathematics",
+       "years": "2004 - 2008",
+       "size": 167
+      },
+      {
+        "name": "Actuarial & Financial",
+        "description": "Managed large (up to $1M) custom web application projects, such as total rewards and wealth accumulation statements, retirement projection tools and financial transactional sites",
+        "years": "2008 - 2012",
+        "size": 167
+      },
+      {
+       "name": "Data Anaylses",
+       "description": "Performed data analyses and retirement plan adequacy studies",
+       "years": "2008 - 2016",
+       "size": 167
+      },
+      {
+       "name": "Full Stack Web Development",
+       "description": "Self studied Ruby on Rails",
+       "years": "2016 - 2017",
+       "size": 167
+      },
+      {
+       "name": "Machine Learning",
+       "description": "Self studied Machine Learning",
+       "years": "2016 - 2017",
+       "size": 167
+      },
+      {
+       "name": "Data Visualization",
+       "description": "Self studied Data Visualization",
+       "years": "2016 - 2017",
+       "size": 167
+      }]
+  },
+  {
+    "name": "Technical",
+    "children": [
+      {
+       "name": "Frontend Web",
+       "children": [
+         {
+          "name": "HTML",
+          "description": "TBD",
+          "years": "2015 - 2017",
+          "size": 30
+         },
+         {
+          "name": "CSS",
+          "description": "TBD",
+          "years": "2015 - 2017",
+          "size": 30
+         },
+         {
+          "name": "JavaScript",
+          "description": "TBD",
+          "years": "2016 - 2017",
+          "size": 30
+         },
+         {
+          "name": "jQuery",
+          "description": "TBD",
+          "years": "2016 - 2017",
+          "size": 30
+         },
+         {
+          "name": "SVG Animation",
+          "description": "TBD",
+          "years": "2016 - 2017",
+          "size": 30
+         }]
+      },
+      {
+       "name": "Backend Web",
+       "children": [
+         {
+          "name": "Ruby on Rails",
+          "description": "TBD",
+          "years": "2016 - 2017",
+          "size": 120
+         },
+         {
+          "name": "SQL",
+          "description": "TBD",
+          "years": "2016 - 2017",
+          "size": 30
+         }]
+      },
+      {
+       "name": "Data Visualization",
+       "children": [
+         {
+          "name": "D3.js",
+          "description": "TBD",
+          "years": "2016 - 2017",
+          "size": 120
+         },
+         {
+          "name": "Dimple.js",
+          "description": "TBD",
+          "years": "2016 - 2017",
+          "size": 30
+         }]
+      },
+      {
+       "name": "Python",
+       "children": [
+         {
+          "name": "numpy",
+          "description": "TBD",
+          "years": "2016 - 2017",
+          "size": 120
+         },
+         {
+          "name": "pandas",
+          "description": "TBD",
+          "years": "2016 - 2017",
+          "size": 30
+         }]
+      }]
+  }]
+}

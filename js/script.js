@@ -14,7 +14,7 @@ $(document).ready(function(){
     });
 
 
-  $(document).on('click', 'a', function(event){
+  $(document).on('click', '.section-link', function(event){
       event.preventDefault();
 
       $('html, body').animate({
@@ -28,6 +28,10 @@ $(document).ready(function(){
       $('.up-arrow span').addClass("run-animation");
 
   });
+
+//  $(".circle_border").on('click', function() {
+//    window.location.href = this.href;
+//  };
 
 });
 

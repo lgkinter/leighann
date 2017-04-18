@@ -11,7 +11,8 @@
 
 		<!-- TODO: Favicons -->
 
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/stylesheet.css">
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -23,6 +24,7 @@
 		<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
 
 	</head>
 	<body>
@@ -60,11 +62,11 @@
 					<div class="right-nav col-md-11 col-sm-11 text-right">
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-left text-uppercase">
-                                <li><a href="#home" class="active">Home</a> </li>
-                                <li><a href="#about">About</a> </li>
-                                <li><a href="#skills">Skills</a></li>
-                                <li><a href="#portfolio">Portfolio</a></li>
-                                <li><a href="#contact">Contact</a> </li>
+                                <li><a href="#home" class="section-link active">Home</a> </li>
+                                <li><a href="#about" class="section-link">About</a> </li>
+                                <li><a href="#skills" class="section-link">Skills</a></li>
+                                <li><a href="#portfolio" class="section-link">Portfolio</a></li>
+                                <li><a href="#contact" class="section-link">Contact</a> </li>
                             </ul>
                         </div>
                     </div>
@@ -171,7 +173,7 @@
 									</div>
               </div>
             </div>
-						<a class="down-arrow" href="#about"><span class="run-animation"></span><span class="run-animation"></span><span class="run-animation"></span></a>
+						<a class="section-link down-arrow" href="#about"><span class="run-animation"></span><span class="run-animation"></span><span class="run-animation"></span></a>
 			</section>
 
 		<!-- ==============================================
@@ -192,7 +194,7 @@
           </div>
       </div>
 		</div>
-		<a class="down-arrow" href="#skills"><span></span><span></span><span></span></a>
+		<a class="section-link down-arrow" href="#skills"><span></span><span></span><span></span></a>
     </section>
 
 
@@ -204,8 +206,20 @@
                 <div class="row">
 									<h3 class="section-title no-padding text-center">Skills</h3>
                 </div>
+								<div class="row">
+									<div class= "col-md-8">
+										<div id="skills-wrapper"></div>
+									</div>
+									<div id="skills-info-wrapper" class="col-md-4">
+										<div id="skills-info" class="center-block text-center">
+											<div><span id="skills-name">Experiement</span></div>
+											<div><span id="skills-years"></span></div>
+											<div><span id="skills-description">Try it out!</span></div>
+										</div>
+									</div>
+								</div>
             </div>
-						<a class="down-arrow" href="#portfolio"><span></span><span></span><span></span></a>
+						<a class="section-link down-arrow" href="#portfolio"><span></span><span></span><span></span></a>
         </section>
 
         <!-- ==============================================
@@ -238,7 +252,7 @@
                     </div>
                 </div>
             </div>
-						<a class="down-arrow" href="#contact"><span></span><span></span><span></span></a>
+						<a class="section-link down-arrow" href="#contact"><span></span><span></span><span></span></a>
         </section>
 
         <!-- ==============================================
@@ -250,80 +264,49 @@
 								<div class="col-md-7 text-center padding-top-60">
 									<h3 class="section-title no-padding text-center">Contact</h3>
 									<div class="container social-links text-center">
-										<svg class="svg--source" width="0" height="0" aria-hidden="true">
-
-										  <symbol id="svg--email" viewBox="0 0 512 512">
-										  	<path d="M256.01 266.834l-127.484-105.65h255.32L256.01 266.835zm-.02 34.462L128 195.258v155.557h256V195.513L255.99 301.296z"/>
-										  </symbol>
-
-										  <symbol id="svg--location" viewBox="0 0 512 512">
-										  	<path d="M255.998 128c-53.015 0-96 42.98-96 96s96 160 96 160 96.004-106.98 96.004-160c0-53.02-42.985-96-96.004-96zm0 135.998c-26.508 0-48-21.49-48-47.998 0-26.512 21.492-48 48-48 26.51 0 48 21.488 48 48 0 26.508-21.49 47.998-48 47.998z" clip-rule="evenodd" fill-rule="evenodd"/>
-											</symbol>
-
-										  <symbol id="svg--linkedin" viewBox="0 0 511.99999 511.99999">
-										  	<path d="M384 283.667v94.644h-54.87v-88.305c0-22.183-7.935-37.322-27.796-37.322-15.16 0-24.184 10.203-28.153 20.072-1.447 3.528-1.82 8.44-1.82 13.378v92.178h-54.887s.74-149.56 0-165.056h54.883v23.396c-.112.175-.256.364-.36.534h.36v-.534c7.29-11.23 20.313-27.273 49.46-27.273 36.113 0 63.184 23.59 63.184 74.29zm-224.94-149.98c-18.778 0-31.06 12.318-31.06 28.514 0 15.844 11.926 28.534 30.33 28.534h.367c19.14 0 31.044-12.687 31.044-28.533-.36-16.195-11.903-28.512-30.68-28.512zm-27.8 244.624h54.867V213.255H131.26V378.31z"/>
-										  </symbol>
-
-										  <symbol id="svg--facebook" viewbox="0 -7 16 30">
-										    <path d="M12 3.303h-2.285c-0.27 0-0.572 0.355-0.572 0.831v1.65h2.857v2.352h-2.857v7.064h-2.698v-7.063h-2.446v-2.353h2.446v-1.384c0-1.985 1.378-3.6 3.269-3.6h2.286v2.503z" />
-										  </symbol>
-
-										  <symbol id="svg--insta" viewBox="0 0 507.0848 507.0848">
-											  <style id="style4432">
-											    .st0{clip-path:url(#SVGID_2_)}.st1{enable-background:new}.st2{clip-path:url(#SVGID_5_);fill:#fff}.st3{clip-path:url(#SVGID_7_)}.st4{clip-path:url(#SVGID_9_)}.st5{clip-path:url(#SVGID_11_);fill:#204bff}.st6{clip-path:url(#SVGID_13_)}.st7{clip-path:url(#SVGID_16_)}.st8{clip-path:url(#SVGID_17_)}.st9{clip-path:url(#SVGID_19_)}.st10{clip-path:url(#SVGID_21_)}.st11{clip-path:url(#SVGID_23_)}.st12{clip-path:url(#SVGID_26_)}.st13{clip-path:url(#SVGID_27_)}.st14{clip-path:url(#SVGID_29_)}.st15{clip-path:url(#SVGID_32_)}.st16{clip-path:url(#SVGID_33_)}.st17{clip-path:url(#SVGID_35_)}.st18{clip-path:url(#SVGID_37_)}.st19{clip-path:url(#SVGID_39_)}.st20{clip-path:url(#SVGID_41_)}.st21{opacity:.45}.st22{clip-path:url(#SVGID_43_)}.st23{clip-path:url(#SVGID_45_)}
-											  </style>
-											  <defs id="defs4434">
-											    <path id="SVGID_1_" d="M825.4 1238c0-227.9 184.7-412.7 412.6-412.7 227.9 0 412.7 184.8 412.7 412.7 0 227.9-184.8 412.7-412.7 412.7-227.9 0-412.6-184.8-412.6-412.7m-223.1 0c0 351.1 284.6 635.7 635.7 635.7s635.7-284.6 635.7-635.7-284.6-635.7-635.7-635.7S602.3 886.9 602.3 1238m1148-660.9c0 82 66.5 148.6 148.6 148.6 82 0 148.6-66.6 148.6-148.6s-66.5-148.5-148.6-148.5-148.6 66.5-148.6 148.5M737.8 2245.7c-120.7-5.5-186.3-25.6-229.9-42.6-57.8-22.5-99-49.3-142.4-92.6-43.3-43.3-70.2-84.5-92.6-142.3-17-43.6-37.1-109.2-42.6-229.9-6-130.5-7.2-169.7-7.2-500.3s1.3-369.7 7.2-500.3c5.5-120.7 25.7-186.2 42.6-229.9 22.5-57.8 49.3-99 92.6-142.4 43.3-43.3 84.5-70.2 142.4-92.6 43.6-17 109.2-37.1 229.9-42.6 130.5-6 169.7-7.2 500.2-7.2 330.6 0 369.7 1.3 500.3 7.2 120.7 5.5 186.2 25.7 229.9 42.6 57.8 22.4 99 49.3 142.4 92.6 43.3 43.3 70.1 84.6 92.6 142.4 17 43.6 37.1 109.2 42.6 229.9 6 130.6 7.2 169.7 7.2 500.3 0 330.5-1.2 369.7-7.2 500.3-5.5 120.7-25.7 186.3-42.6 229.9-22.5 57.8-49.3 99-92.6 142.3-43.3 43.3-84.6 70.1-142.4 92.6-43.6 17-109.2 37.1-229.9 42.6-130.5 6-169.7 7.2-500.3 7.2-330.5 0-369.7-1.2-500.2-7.2M727.6 7.5c-131.8 6-221.8 26.9-300.5 57.5-81.4 31.6-150.4 74-219.3 142.8C139 276.6 96.6 345.6 65 427.1 34.4 505.8 13.5 595.8 7.5 727.6 1.4 859.6 0 901.8 0 1238s1.4 378.4 7.5 510.4c6 131.8 26.9 221.8 57.5 300.5 31.6 81.4 73.9 150.5 142.8 219.3 68.8 68.8 137.8 111.1 219.3 142.8 78.8 30.6 168.7 51.5 300.5 57.5 132.1 6 174.2 7.5 510.4 7.5 336.3 0 378.4-1.4 510.4-7.5 131.8-6 221.8-26.9 300.5-57.5 81.4-31.7 150.4-74 219.3-142.8 68.8-68.8 111.1-137.9 142.8-219.3 30.6-78.7 51.6-168.7 57.5-300.5 6-132.1 7.4-174.2 7.4-510.4s-1.4-378.4-7.4-510.4c-6-131.8-26.9-221.8-57.5-300.5-31.7-81.4-74-150.4-142.8-219.3C2199.4 139 2130.3 96.6 2049 65c-78.8-30.6-168.8-51.6-300.5-57.5-132-6-174.2-7.5-510.4-7.5-336.3 0-378.4 1.4-510.5 7.5"/>
-											  </defs>
-											  <clipPath id="SVGID_2_">
-											    <use xlink:href="#SVGID_1_" overflow="visible" id="use4438" width="100%" height="100%"/>
-											  </clipPath>
-											  <path class="st0" d="M-5964.9-5964.9H8447.9V8440.9H-5964.9z" id="path4440" clip-path="url(#SVGID_2_)" transform="translate(126.77 126.77) scale(.1024)"/>
-											</symbol>
-
-												<defs>
-											    <path id="a" d="M0 0h800v800H0z"/>
-											  </defs>
-											  <clipPath id="b">
-											    <use xlink:href="#a" overflow="visible"/>
-											  </clipPath>
-											  <path clip-path="url(#b)" d="M400.003 72.068c106.804 0 119.45.408 161.633 2.332 38.997 1.78 60.178 8.298 74.274 13.774 18.673 7.257 31.996 15.926 45.993 29.923 14 13.997 22.67 27.317 29.923 45.99 5.477 14.097 11.993 35.277 13.77 74.275 1.925 42.18 2.333 54.83 2.333 161.636s-.41 119.457-2.333 161.636c-1.778 39-8.295 60.18-13.77 74.274-7.255 18.67-15.925 31.993-29.924 45.993-13.997 13.997-27.32 22.667-45.993 29.924-14.097 5.476-35.277 11.993-74.274 13.77-42.175 1.928-54.82 2.332-161.633 2.332-106.815 0-119.46-.404-161.636-2.33-38.997-1.78-60.178-8.297-74.275-13.772-18.67-7.257-31.996-15.927-45.993-29.923-13.997-14-22.664-27.323-29.92-45.992-5.477-14.094-11.997-35.274-13.775-74.274-1.924-42.18-2.332-54.83-2.332-161.636s.408-119.455 2.332-161.636c1.778-38.998 8.298-60.178 13.774-74.275 7.256-18.672 15.923-31.993 29.92-45.99 13.996-13.997 27.323-22.666 45.992-29.923C178.19 82.698 199.37 76.18 238.367 74.4c42.182-1.924 54.83-2.332 161.636-2.332m0-72.07c-108.636 0-122.258.458-164.92 2.407-42.577 1.942-71.654 8.706-97.096 18.593-26.304 10.222-48.61 23.898-70.847 46.135C44.903 89.37 31.223 111.68 21.004 137.98c-9.893 25.45-16.654 54.522-18.596 97.1C.46 277.746.003 291.365.003 399.997c0 108.636.457 122.255 2.405 164.917 1.942 42.58 8.703 71.654 18.596 97.1 10.22 26.303 23.9 48.61 46.136 70.85C89.376 755.1 111.683 768.778 137.987 779c25.442 9.887 54.52 16.647 97.096 18.593 42.663 1.945 56.285 2.408 164.92 2.408 108.633 0 122.255-.462 164.917-2.407 42.578-1.945 71.654-8.706 97.097-18.593 26.304-10.222 48.61-23.898 70.85-46.136 22.237-22.24 35.914-44.547 46.136-70.85 9.89-25.445 16.65-54.52 18.594-97.1 1.947-42.662 2.404-56.28 2.404-164.917 0-108.633-.456-122.252-2.403-164.917-1.942-42.577-8.703-71.65-18.594-97.1-10.222-26.3-23.898-48.61-46.135-70.846C710.628 44.897 688.32 31.22 662.018 21c-25.443-9.888-54.52-16.652-97.098-18.594-42.662-1.95-56.284-2.41-164.917-2.41"/>
-											  <path clip-path="url(#b)" d="M400.003 194.594c-113.442 0-205.406 91.96-205.406 205.403S286.56 605.4 400.003 605.4c113.44 0 205.403-91.96 205.403-205.403s-91.964-205.403-205.403-205.403m0 338.735c-73.64 0-133.335-59.694-133.335-133.333s59.696-133.333 133.335-133.333 133.332 59.694 133.332 133.333S473.642 533.33 400.003 533.33M661.523 186.48c0 26.506-21.488 47.997-48.002 47.997-26.507 0-47.997-21.49-47.997-47.998 0-26.515 21.49-48.003 47.998-48.003 26.515 0 48.003 21.488 48.003 48.002"/>
-
-										</svg>
-
 										<div class="wrapper">
 										  <div class="connect">
 
-										    <a href="mailto:leighann.kinter@gmail.com" class="email circle_border">
-										      <svg role="presentation" class="svg--icon">
-										        <use xlink:href="#svg--email" />
+										  	<a href="mailto:leighann.kinter@gmail.com" class="email circle_border">
+													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg--email" class="svg--icon" viewBox="0 0 512 512">
+												 		<path d="M256.01 266.834l-127.484-105.65h255.32L256.01 266.835zm-.02 34.462L128 195.258v155.557h256V195.513L255.99 301.296z"/>
+													</svg>
+												</a>
+
+										    <a href="https://www.google.com/maps/place/Raleigh,+NC/" class="location circle_border" target="_blank">
+													<svg id="svg--location" class="svg--icon" viewBox="0 0 512 512">
+															<path d="M255.998 128c-53.015 0-96 42.98-96 96s96 160 96 160 96.004-106.98 96.004-160c0-53.02-42.985-96-96.004-96zm0 135.998c-26.508 0-48-21.49-48-47.998 0-26.512 21.492-48 48-48 26.51 0 48 21.488 48 48 0 26.508-21.49 47.998-48 47.998z" clip-rule="evenodd" fill-rule="evenodd"/>
 										      </svg>
 										    </a>
 
-										     <a href="https://www.google.com/maps/place/Raleigh,+NC/" class="location circle_border">
-										      <svg role="presentation" class="svg--icon">
-										        <use xlink:href="#svg--location" />
+										    <a href="https://www.linkedin.com/in/leighann-kinter-a33a3313" class="linkedin circle_border" target="_blank">
+													<svg id="svg--linkedin" class="svg--icon" viewBox="0 0 511.99999 511.99999">
+												  	<path d="M384 283.667v94.644h-54.87v-88.305c0-22.183-7.935-37.322-27.796-37.322-15.16 0-24.184 10.203-28.153 20.072-1.447 3.528-1.82 8.44-1.82 13.378v92.178h-54.887s.74-149.56 0-165.056h54.883v23.396c-.112.175-.256.364-.36.534h.36v-.534c7.29-11.23 20.313-27.273 49.46-27.273 36.113 0 63.184 23.59 63.184 74.29zm-224.94-149.98c-18.778 0-31.06 12.318-31.06 28.514 0 15.844 11.926 28.534 30.33 28.534h.367c19.14 0 31.044-12.687 31.044-28.533-.36-16.195-11.903-28.512-30.68-28.512zm-27.8 244.624h54.867V213.255H131.26V378.31z"/>
 										      </svg>
 										    </a>
 
-										    <a href="https://www.linkedin.com/in/leighann-kinter-a33a3313" class="linkedin circle_border">
-										      <svg role="presentation" class="svg--icon">
-										        <use xlink:href="#svg--linkedin" />
+												<a href="https://www.instagram.com/lgkinter/" class="insta circle_border" target="_blank">
+
+														<svg id="svg--insta" class="svg--icon" viewBox="0 0 507.0848 507.0848">
+															<style id="style4432">
+																.st0{clip-path:url(#SVGID_2_)}.st1{enable-background:new}.st2{clip-path:url(#SVGID_5_);fill:#fff}.st3{clip-path:url(#SVGID_7_)}.st4{clip-path:url(#SVGID_9_)}.st5{clip-path:url(#SVGID_11_);fill:#204bff}.st6{clip-path:url(#SVGID_13_)}.st7{clip-path:url(#SVGID_16_)}.st8{clip-path:url(#SVGID_17_)}.st9{clip-path:url(#SVGID_19_)}.st10{clip-path:url(#SVGID_21_)}.st11{clip-path:url(#SVGID_23_)}.st12{clip-path:url(#SVGID_26_)}.st13{clip-path:url(#SVGID_27_)}.st14{clip-path:url(#SVGID_29_)}.st15{clip-path:url(#SVGID_32_)}.st16{clip-path:url(#SVGID_33_)}.st17{clip-path:url(#SVGID_35_)}.st18{clip-path:url(#SVGID_37_)}.st19{clip-path:url(#SVGID_39_)}.st20{clip-path:url(#SVGID_41_)}.st21{opacity:.45}.st22{clip-path:url(#SVGID_43_)}.st23{clip-path:url(#SVGID_45_)}
+															</style>
+															<defs id="defs4434">
+																<path id="SVGID_1_" d="M825.4 1238c0-227.9 184.7-412.7 412.6-412.7 227.9 0 412.7 184.8 412.7 412.7 0 227.9-184.8 412.7-412.7 412.7-227.9 0-412.6-184.8-412.6-412.7m-223.1 0c0 351.1 284.6 635.7 635.7 635.7s635.7-284.6 635.7-635.7-284.6-635.7-635.7-635.7S602.3 886.9 602.3 1238m1148-660.9c0 82 66.5 148.6 148.6 148.6 82 0 148.6-66.6 148.6-148.6s-66.5-148.5-148.6-148.5-148.6 66.5-148.6 148.5M737.8 2245.7c-120.7-5.5-186.3-25.6-229.9-42.6-57.8-22.5-99-49.3-142.4-92.6-43.3-43.3-70.2-84.5-92.6-142.3-17-43.6-37.1-109.2-42.6-229.9-6-130.5-7.2-169.7-7.2-500.3s1.3-369.7 7.2-500.3c5.5-120.7 25.7-186.2 42.6-229.9 22.5-57.8 49.3-99 92.6-142.4 43.3-43.3 84.5-70.2 142.4-92.6 43.6-17 109.2-37.1 229.9-42.6 130.5-6 169.7-7.2 500.2-7.2 330.6 0 369.7 1.3 500.3 7.2 120.7 5.5 186.2 25.7 229.9 42.6 57.8 22.4 99 49.3 142.4 92.6 43.3 43.3 70.1 84.6 92.6 142.4 17 43.6 37.1 109.2 42.6 229.9 6 130.6 7.2 169.7 7.2 500.3 0 330.5-1.2 369.7-7.2 500.3-5.5 120.7-25.7 186.3-42.6 229.9-22.5 57.8-49.3 99-92.6 142.3-43.3 43.3-84.6 70.1-142.4 92.6-43.6 17-109.2 37.1-229.9 42.6-130.5 6-169.7 7.2-500.3 7.2-330.5 0-369.7-1.2-500.2-7.2M727.6 7.5c-131.8 6-221.8 26.9-300.5 57.5-81.4 31.6-150.4 74-219.3 142.8C139 276.6 96.6 345.6 65 427.1 34.4 505.8 13.5 595.8 7.5 727.6 1.4 859.6 0 901.8 0 1238s1.4 378.4 7.5 510.4c6 131.8 26.9 221.8 57.5 300.5 31.6 81.4 73.9 150.5 142.8 219.3 68.8 68.8 137.8 111.1 219.3 142.8 78.8 30.6 168.7 51.5 300.5 57.5 132.1 6 174.2 7.5 510.4 7.5 336.3 0 378.4-1.4 510.4-7.5 131.8-6 221.8-26.9 300.5-57.5 81.4-31.7 150.4-74 219.3-142.8 68.8-68.8 111.1-137.9 142.8-219.3 30.6-78.7 51.6-168.7 57.5-300.5 6-132.1 7.4-174.2 7.4-510.4s-1.4-378.4-7.4-510.4c-6-131.8-26.9-221.8-57.5-300.5-31.7-81.4-74-150.4-142.8-219.3C2199.4 139 2130.3 96.6 2049 65c-78.8-30.6-168.8-51.6-300.5-57.5-132-6-174.2-7.5-510.4-7.5-336.3 0-378.4 1.4-510.5 7.5"/>
+																<path id="a" d="M0 0h800v800H0z"/>
+															</defs>
+															<clipPath id="SVGID_2_">
+																<use xlink:href="#SVGID_1_" overflow="visible" id="use4438" width="100%" height="100%"/>
+															</clipPath>
+															<path class="st0" d="M-5964.9-5964.9H8447.9V8440.9H-5964.9z" id="path4440" clip-path="url(#SVGID_2_)" transform="translate(126.77 126.77) scale(.1024)"/>
 										      </svg>
 										    </a>
 
-										    <a href="https://www.instagram.com/lgkinter/" rel="author" class="insta circle_border">
-										      <svg role="presentation" class="svg--icon">
-										        <use xlink:href="#svg--insta" />
-										      </svg>
-										    </a>
-
-										    <a href="https://www.facebook.com/lgkinter" rel="author" class="facebook circle_border">
-										      <svg role="presentation" class="svg--icon">
-										        <use xlink:href="#svg--facebook" />
-										      </svg>
-										    </a>
+												<a href="https://www.facebook.com/lgkinter" class="facebook circle_border" target="_blank">
+													<svg id="svg--facebook" class="svg--icon" viewbox="0 -7 16 30">
+														 <path d="M12 3.303h-2.285c-0.27 0-0.572 0.355-0.572 0.831v1.65h2.857v2.352h-2.857v7.064h-2.698v-7.063h-2.446v-2.353h2.446v-1.384c0-1.985 1.378-3.6 3.269-3.6h2.286v2.503z" />
+													</svg>
+												</a>
 
 										  </div>
 										</div>
@@ -360,7 +343,7 @@
 								</div>
 							</div>
             </div>
-						<a class="up-arrow" href="#home"><span></span><span></span><span></span></a>
+						<a class="section-link up-arrow" href="#home"><span></span><span></span><span></span></a>
 			   </section>
         <!-- end contact us section -->
 
@@ -375,11 +358,8 @@
             </div>
         </div>
 
+				<script type="text/javascript" src="js/skills_chart.js"></script>
 
     </body>
-
-</html>
-
-	</body>
 
 </html>
