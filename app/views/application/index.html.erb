@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Leighann Kinter</title>
 
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/stylesheet.css">
@@ -20,6 +20,7 @@
         JavaScript
         =============================================== -->
 		<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 		<script src="https://d3js.org/d3.v3.min.js"></script>
@@ -233,7 +234,7 @@
                 <div class="row no-margin">
                     <div class="col-md-12 text-center">
                         <div class="text-center">
-                            <ul class="portfolio-filter nav nav-tabs margin-one no-margin-top xs-margin-bottom-seven">
+                            <ul class="portfolio-filter nav">
                                 <li class="nav active"><a href="#" data-filter="*">All</a></li>
                                 <li class="nav"><a href="#" data-filter=".vis">Data Visualization</a></li>
                                 <li class="nav"><a href="#" data-filter=".web">Web</a></li>
@@ -310,30 +311,31 @@
 										</div>
 									</div>
 									<hr>
-									<!-- form -->
+									<%= render partial: 'contacts/form' %>
+									<!-- form
 									<form id="contactform" action="javascript:void(0)" method="post">
 				             <div>
 												<input name="name" type="text" placeholder="Your Name" />
 				               	<input name="email" type="text" placeholder="Your Email"  />
 				                <textarea name="comment" placeholder="Your Message" ></textarea>
-				                <!-- <div class="col-md-4 col-sm-6 float-right no-padding no-margin"><input id="contact-us-button" name="send message" type="button" value="send message" class="highlight-button btn btn-default btn-medium"></div> -->
+
 												<div class="col-md-12 col-sm-6 float-right no-padding no-margin">
-													<svg id="send-button" class="shadow button_border" xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 210 90" onclick="fly(); check();">
-														<g transform="translate(15,15)">
-													  	<!-- <rect id="box" width="167.612" height="57.612" x="1.194" y="1.194" rx="7.051" ry="5.601" fill="#fff" stroke="rgba(50, 50, 50, 0.25)" stroke-width="1.25" onclick="fly(); check();"/>
-													  	--><g id="send" style="line-height:125%" font-size="25" font-family="Open Sans" letter-spacing="0" word-spacing="0">
-													    	<path d="M51.286 32.038q0 2.356-1.71 3.674-1.708 1.32-4.638 1.32-3.174 0-4.883-.82v-2q1.1.463 2.393.73 1.294.27 2.563.27 2.076 0 3.126-.78 1.05-.795 1.05-2.2 0-.926-.378-1.512-.367-.598-1.246-1.1-.866-.5-2.648-1.134-2.49-.89-3.565-2.112-1.063-1.22-1.063-3.186 0-2.063 1.55-3.284 1.55-1.22 4.102-1.22 2.66 0 4.894.976l-.647 1.807q-2.21-.928-4.297-.928-1.648 0-2.576.707-.927.708-.927 1.965 0 .928.342 1.526.34.586 1.146 1.087.818.488 2.49 1.086 2.808 1.002 3.858 2.15 1.062 1.147 1.062 2.978zM64.884 36.787h-9.948V18.94h9.948v1.843H57.01v5.75h7.398v1.83H57.01v6.568h7.874v1.857zM82.792 36.787h-2.368L70.67 21.81h-.097q.195 2.635.195 4.833v10.144h-1.916V18.94h2.343l9.73 14.917h.097q-.024-.33-.11-2.112-.085-1.794-.06-2.563V18.94h1.94v17.847zM101.945 27.692q0 4.42-2.405 6.763-2.393 2.332-6.897 2.332H87.7V18.94h5.468q4.163 0 6.47 2.307 2.307 2.307 2.307 6.445zm-2.197.074q0-3.492-1.758-5.262-1.746-1.77-5.2-1.77h-3.016v14.258H92.3q3.712 0 5.58-1.82 1.868-1.83 1.868-5.406z" style="-inkscape-font-specification:'Open Sans'"/>
-													  	</g>
-													  	<path id="plane" d="M108.793 25.378l4.457 3.394 13.65-4.932-11.414 6.31 1.55 6.422 2.98-3.5-2.924-1.203-.286-1.09 8.83 2.293 7.57-12.502z"/>
-													  	<g id="sent" style="line-height:125%" font-size="25" font-family="Open Sans" letter-spacing="0" word-spacing="0">
-													    	<path d="M51.286 32.038q0 2.356-1.71 3.674-1.708 1.32-4.638 1.32-3.174 0-4.883-.82v-2q1.1.463 2.393.73 1.294.27 2.563.27 2.076 0 3.126-.78 1.05-.795 1.05-2.2 0-.926-.378-1.512-.367-.598-1.246-1.1-.866-.5-2.648-1.134-2.49-.89-3.565-2.112-1.063-1.22-1.063-3.186 0-2.063 1.55-3.284 1.55-1.22 4.102-1.22 2.66 0 4.894.976l-.647 1.807q-2.21-.928-4.297-.928-1.648 0-2.576.707-.927.708-.927 1.965 0 .928.342 1.526.34.586 1.146 1.087.818.488 2.49 1.086 2.808 1.002 3.858 2.15 1.062 1.147 1.062 2.978zM64.884 36.787h-9.948V18.94h9.948v1.843H57.01v5.75h7.398v1.83H57.01v6.568h7.874v1.857zM82.792 36.787h-2.368L70.67 21.81h-.097q.195 2.635.195 4.833v10.144h-1.916V18.94h2.343l9.73 14.917h.097q-.024-.33-.11-2.112-.085-1.794-.06-2.563V18.94h1.94v17.847zM93.192 36.787h-2.075V20.783h-5.652V18.94h13.38v1.843H93.19v16.004z" style="-inkscape-font-specification:'Open Sans'"/>
-													  	</g>
-													  	<path id="check-mark" d="M111.048 27.48c.088-.788.65-1.26 1.468-1.56l4.726 3.487c3.15-3.8 6.943-7.456 11.193-11.01.72-.415 1.438-.304 2.156.137-5.577 5.644-9.055 11.934-13.165 18.03z"/>
-													 </g>
-												 </svg>
+												<svg id="send-button" class="shadow button_border" xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 210 90" onclick="fly(); check();">
+													<g transform="translate(15,15)">
+														<g id="send" style="line-height:125%" font-size="25" font-family="Open Sans" letter-spacing="0" word-spacing="0">
+															<path d="M51.286 32.038q0 2.356-1.71 3.674-1.708 1.32-4.638 1.32-3.174 0-4.883-.82v-2q1.1.463 2.393.73 1.294.27 2.563.27 2.076 0 3.126-.78 1.05-.795 1.05-2.2 0-.926-.378-1.512-.367-.598-1.246-1.1-.866-.5-2.648-1.134-2.49-.89-3.565-2.112-1.063-1.22-1.063-3.186 0-2.063 1.55-3.284 1.55-1.22 4.102-1.22 2.66 0 4.894.976l-.647 1.807q-2.21-.928-4.297-.928-1.648 0-2.576.707-.927.708-.927 1.965 0 .928.342 1.526.34.586 1.146 1.087.818.488 2.49 1.086 2.808 1.002 3.858 2.15 1.062 1.147 1.062 2.978zM64.884 36.787h-9.948V18.94h9.948v1.843H57.01v5.75h7.398v1.83H57.01v6.568h7.874v1.857zM82.792 36.787h-2.368L70.67 21.81h-.097q.195 2.635.195 4.833v10.144h-1.916V18.94h2.343l9.73 14.917h.097q-.024-.33-.11-2.112-.085-1.794-.06-2.563V18.94h1.94v17.847zM101.945 27.692q0 4.42-2.405 6.763-2.393 2.332-6.897 2.332H87.7V18.94h5.468q4.163 0 6.47 2.307 2.307 2.307 2.307 6.445zm-2.197.074q0-3.492-1.758-5.262-1.746-1.77-5.2-1.77h-3.016v14.258H92.3q3.712 0 5.58-1.82 1.868-1.83 1.868-5.406z" style="-inkscape-font-specification:'Open Sans'"/>
+														</g>
+														<path id="plane" d="M108.793 25.378l4.457 3.394 13.65-4.932-11.414 6.31 1.55 6.422 2.98-3.5-2.924-1.203-.286-1.09 8.83 2.293 7.57-12.502z"/>
+														<g id="sent" style="line-height:125%" font-size="25" font-family="Open Sans" letter-spacing="0" word-spacing="0">
+															<path d="M51.286 32.038q0 2.356-1.71 3.674-1.708 1.32-4.638 1.32-3.174 0-4.883-.82v-2q1.1.463 2.393.73 1.294.27 2.563.27 2.076 0 3.126-.78 1.05-.795 1.05-2.2 0-.926-.378-1.512-.367-.598-1.246-1.1-.866-.5-2.648-1.134-2.49-.89-3.565-2.112-1.063-1.22-1.063-3.186 0-2.063 1.55-3.284 1.55-1.22 4.102-1.22 2.66 0 4.894.976l-.647 1.807q-2.21-.928-4.297-.928-1.648 0-2.576.707-.927.708-.927 1.965 0 .928.342 1.526.34.586 1.146 1.087.818.488 2.49 1.086 2.808 1.002 3.858 2.15 1.062 1.147 1.062 2.978zM64.884 36.787h-9.948V18.94h9.948v1.843H57.01v5.75h7.398v1.83H57.01v6.568h7.874v1.857zM82.792 36.787h-2.368L70.67 21.81h-.097q.195 2.635.195 4.833v10.144h-1.916V18.94h2.343l9.73 14.917h.097q-.024-.33-.11-2.112-.085-1.794-.06-2.563V18.94h1.94v17.847zM93.192 36.787h-2.075V20.783h-5.652V18.94h13.38v1.843H93.19v16.004z" style="-inkscape-font-specification:'Open Sans'"/>
+														</g>
+														<path id="check-mark" d="M111.048 27.48c.088-.788.65-1.26 1.468-1.56l4.726 3.487c3.15-3.8 6.943-7.456 11.193-11.01.72-.415 1.438-.304 2.156.137-5.577 5.644-9.055 11.934-13.165 18.03z"/>
+												 </g>
+											 </svg>
 											 </div>
+
 				            </div>
-				          </form>
+				          </form> -->
 				         	<!-- end form -->
               	</div>
 								<div class="col-md-5 no-padding">

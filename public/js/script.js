@@ -29,20 +29,24 @@ $(document).ready(function(){
 
   });
 
-//  $(".circle_border").on('click', function() {
-//    window.location.href = this.href;
-//  };
+  $("#contactform").validate();            // <- INITIALIZES PLUGIN
+  console.log($("#contactform").valid());  // <- TEST VALIDATION
+
 
 });
 
+
 function fly() {
-  $('#plane').addClass("fly");
-  $('#send').addClass("disappears");
+  if ($("#contactform").valid()) {
+    $('#plane').addClass("fly");
+    $('#send').addClass("disappears");
+  };
 };
 
 function check() {
-  $('#check-mark').addClass("appears");
-  $('#sent').addClass("appears");
-  $('#send-button').addClass("disabled");
-
+  if ($("#contactform").valid()) {
+    $('#check-mark').addClass("appears");
+    $('#sent').addClass("appears");
+    $('#send-button').addClass("disabled");
+  };
 };

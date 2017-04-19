@@ -16,6 +16,14 @@ body {
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
+  transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -o-transition-duration: .2s;
 }
 
 section {
@@ -24,6 +32,10 @@ section {
 
 .row{
   margin: 0;
+}
+
+.hidden {
+  display: none;
 }
 
 .down-arrow, .up-arrow {
@@ -188,16 +200,21 @@ nav .container{
   display: table-cell;
 }
 
-.navbar-default .navbar-nav > li > a{
+.navbar-default .navbar-nav > li > a,
+.portfolio-filter > li > a{
   color: #fff;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 5px 20px;
 }
 .navbar-default .navbar-nav > li > a:active,
 .navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus{
+.navbar-default .navbar-nav > li > a:focus {
   border-bottom: 2px solid #4d173c !important;
   font-weight: bold;
   color: #4d173c;
 }
+
 .navbar-default {
   background:transparent;  /* change upon scroll */
   border-bottom:0px;
@@ -552,6 +569,11 @@ a.circle_border:after {
   stroke: #4d173c;
 }
 
+.submit-button {
+  background-color: transparent;
+  border: none;
+}
+
 .button_border:hover {
     border-color: #4d173c;
     background-color: rgba(255,255,255,0.25);
@@ -672,4 +694,27 @@ text {
 
 .hidden {
   visibility: hidden;
+}
+
+/* ===================================
+    Portfolio
+====================================== */
+
+.portfolio-filter > li {
+  display: inline-block;
+}
+
+.portfolio-filter > li > a {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin: 15px 25px;
+}
+
+.portfolio-filter > li > a:active,
+.portfolio-filter > li > a:hover,
+.portfolio-filter > li > a:focus{
+  border-bottom: 2px solid #ef3f56 !important;
+  color: #ef3f56;
+  background-color: transparent;
 }
