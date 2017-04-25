@@ -59,15 +59,14 @@ $(document).ready(function(){
 
   });
 
-  jQuery.noConflict();
-  var $projects = $('#projects');
+  var projects = $('#projects');
   var filterValue = '*';
 
   $(function(){
 
-    $projects.imagesLoaded( function (){
+    projects.imagesLoaded( function (){
 
-      $projects.isotope({
+      projects.isotope({
         itemSelector: '.grid-item',
         filter: filterValue,
         layoutMode: 'masonry',
@@ -78,12 +77,12 @@ $(document).ready(function(){
   });
 
   $(window).resize(function () {
-    $projects.isotope();
+    projects.isotope();
   });
 
   $('.portfolio-filter button').on("click", function() {
     filterValue = $(this).attr('data-filter');
-    $projects.isotope({ filter: filterValue });
+    projects.isotope({ filter: filterValue });
   });
 
 });
