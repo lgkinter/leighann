@@ -1,0 +1,2 @@
+class LetteringsController < ApplicationController
+end
