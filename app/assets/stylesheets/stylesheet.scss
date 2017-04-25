@@ -896,3 +896,17 @@ a img {
 .project-detail {
   margin-top: 90px;
 }
+
+/* ===================================
+    Login
+====================================== */
+
+.new_user, .new_project, .edit_project {
+  color: black;
+}
+
+.new_user input, .new_project input, .edit_project input {
+  width: auto;
+  margin: 0 0 15px 0;
+
+}

@@ -1,30 +1,4 @@
-<h1>New Project</h1>
+<% provide(:button_text, 'Create project') %>
+<h1 class="new_project">New Project</h1>
 
-<%= form_for @project, html: { multipart: true } do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <%= f.label :subtitle %>
-  <%= f.text_field :subtitle %>
-
-  <span class="picture">
-    <%= f.label :index_pic %>
-    <%= f.file_field :index_pic, accept: 'image/jpeg,image/gif,image/png' %>
-
-    <%= f.label :profile_pics %>
-    <%= f.file_field :profile_pics, multiple: true, accept: 'image/jpeg,image/gif,image/png' %>
-  </span>
-
-  <%= f.submit "Create Project" %>
-
-<% end %>
-
-<script type="text/javascript">
-  $('#project_picture').bind('change', function() {
-    var size_in_megabytes = this.files[0].size/1024/1024;
-    if (size_in_megabytes > 5) {
-      alert('Maximum file size is 5MB. Please choose a smaller file.');
-    }
-  });
-</script>
+<%= render 'form' %>
