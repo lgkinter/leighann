@@ -1,9 +1,10 @@
-<%= form_for @contact, :html => { :id => "contactform" } do |f| %>
-    <%= f.text_field :name, placeholder: "Your Name", required: true %>
+<% if !@submitted %>
+  <%= form_for @contact, :html => { :id => "contactform" } do |f| %>
+    <%= f.text_field :name, placeholder: "YOUR NAME", required: true %>
     <br>
-    <%= f.email_field :email, placeholder: "Your Email", required: true %>
+    <%= f.email_field :email, placeholder: "YOUR EMAIL", required: true %>
     <br>
-    <%= f.text_area :message, as: :text, placeholder: "Your Comment", required: true %>
+    <%= f.text_area :message, as: :text, placeholder: "YOUR COMMENT", required: true %>
     <br>
 
     <div class="hidden">
@@ -29,4 +30,7 @@
       <% end %>
     </div>
 
+  <% end %>
+<% else %>
+  <p class="thanks-message">Thank you!</p>
 <% end %>

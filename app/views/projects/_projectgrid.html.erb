@@ -1,0 +1,16 @@
+<% @projects.each do |project| %>
+  <div class="col-md-4 col-sm-6 col-xs-12 grid-item <%= project.categories %>" id="project-<%= project.id %>">
+    <div class="project_pic">
+      <%= link_to(project) do %>
+        <div class="overlay">
+          <div class="image-overlay"></div>
+          <div class="text-overlay">
+            <h3 class="project_title"><%= project.title %></h3>
+            <p class="project_subtitle"><%= project.subtitle %></p>
+          </div>
+        </div>
+        <%= image_tag(project.index_pic.url(:thumb)) %>
+      <% end %>
+    </div>
+</div>
+<% end %>

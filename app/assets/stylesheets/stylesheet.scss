@@ -1,3 +1,6 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 html, body {
   height:100%;
 }
@@ -11,19 +14,24 @@ body {
     letter-spacing: 0.02em;
 }
 
-*{
+.notifications {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  left: 90px;
+  z-index: 1030;
+  padding: 7px 35px;
+}
+
+.alert, .notice {
+  padding: 0;
+}
+
+* {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
-  transition-timing-function: ease-in-out;
-  -moz-transition-timing-function: ease-in-out;
-  -webkit-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-duration: .2s;
-  -moz-transition-duration: .2s;
-  -webkit-transition-duration: .2s;
-  -o-transition-duration: .2s;
 }
 
 section {
@@ -195,24 +203,27 @@ nav .container{
 
 .sticky-nav .logo {
   height: 97px;
-  width: 90px;
+  /* width: 90px; */
+  text-align: center;
   vertical-align: middle;
   display: table-cell;
 }
 
 .navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:focus,
 .portfolio-filter > li > a{
   color: #fff;
   letter-spacing: 1px;
   font-weight: 400;
   margin: 5px 20px;
 }
+
+.active,
 .navbar-default .navbar-nav > li > a:active,
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:hover {
   border-bottom: 2px solid #4d173c !important;
-  font-weight: bold;
-  color: #4d173c;
+  font-weight: bold !important;
+  color: #4d173c !important;
 }
 
 .navbar-default {
@@ -243,7 +254,7 @@ section{
 .signature-svg {
   position: absolute;
   padding-left: 3px;
-  top: 800px;
+  top: 700px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -442,7 +453,17 @@ img.img-responsive { display: table-cell; max-width: 100%; }
 .no-padding{ padding:0 !important}
 
 /* Form */
-input, textarea { border: 1px solid #dfdfdf; letter-spacing: 1px; font-size: 11px;  padding: 8px 15px; width: 100%; margin: 0 0 15px 0; text-transform: uppercase; max-width: 100%; resize: none;}
+input, textarea {
+  border: 1px solid #dfdfdf;
+  letter-spacing: 1px;
+  font-size: 11px;
+  padding: 8px 15px;
+  width: 100%;
+  margin: 15px 0 0 0;
+  max-width: 100%;
+  resize: none;
+}
+
 input[type="submit"] { width: auto}
 input[type="button"], input[type="text"], input[type="email"], input[type="search"], input[type="password"], textarea, input[type="submit"] { -webkit-appearance: none;  border-radius: 0; }
 input:focus, textarea:focus{ border: 1px solid #989898; }
@@ -539,13 +560,31 @@ a.circle_border:after {
   color: black;
 }
 
+label.error {
+  display: hidden;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #4d173c;
+}
+
+.submit-button:focus {
+  outline: none;
+}
+
+.submit-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
 #box {
   fill: #EF3F56;
   stroke: #fff;
 }
 
 .button_border {
-  margin: .5rem 1rem .5rem 0;
+  margin: 15px 0 0 0;
   color: #353c4a;
   border: .125rem solid #f3f3f3;
   box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
@@ -567,11 +606,6 @@ a.circle_border:after {
 
 #send-button:hover #box {
   stroke: #4d173c;
-}
-
-.submit-button {
-  background-color: transparent;
-  border: none;
 }
 
 .button_border:hover {
@@ -700,21 +734,165 @@ text {
     Portfolio
 ====================================== */
 
-.portfolio-filter > li {
-  display: inline-block;
+#portfolio .container-fluid {
+  padding: 0 0 20px 0;
 }
 
-.portfolio-filter > li > a {
+.portfolio-filter > button,
+.portfolio-filter > button:focus{
+  display: inline-block;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 400;
   margin: 15px 25px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #fff;
+  background: transparent;
+  outline: none;
 }
 
-.portfolio-filter > li > a:active,
-.portfolio-filter > li > a:hover,
-.portfolio-filter > li > a:focus{
+.portfolio-filter > button > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.portfolio-active,
+.portfolio-filter > button:hover,
+{
   border-bottom: 2px solid #ef3f56 !important;
-  color: #ef3f56;
-  background-color: transparent;
+  color: #ef3f56 !important;
+  background-color: transparent !important;
+}
+
+#projects {
+  margin: 0;
+}
+
+.grid-item {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  #projects .col-sm-6 {
+    width: 49.9%;
+}}
+
+@media (min-width: 992px) {
+  #projects .col-md-4 {
+    width: 33.3%;
+}}
+
+.grid-item a {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.image-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #EF3F56;
+  opacity: 0.75;
+}
+
+.text-overlay {
+  position: absolute;
+  font-size: 24px;
+  line-height: 32px;
+  width: 100%;
+  color: #FFF;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.project_title{
+  display: block;
+}
+
+.project_subtitle{
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 10px 5px 0 5px;
+  font-weight: 700;
+}
+
+a img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+  border: 0;
+}
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* ===================================
+    Project Page
+====================================== */
+
+#project-detail-section {
+  padding: 60px 0;
+  background-color:#4d173c;
+  background: -webkit-linear-gradient(left, #EF3F56, #FA9883);
+  background: -webkit-linear-gradient(left, #EF3F56, #FA9883); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #EF3F56, #FA9883); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #EF3F56, #FA9883); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #EF3F56, #FA9883); /* Standard syntax (must be last) */
+}
+
+.project-detail {
+  margin-top: 90px;
 }
