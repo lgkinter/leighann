@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170424213254) do
+ActiveRecord::Schema.define(version: 20170425032156) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20170424213254) do
     t.string   "index_pic"
     t.         "profile_pics"
     t.string   "categories"
+    t.string   "slug"
+    t.index ["slug"], name: "index_projects_on_slug"
   end
 
   create_table "users", force: :cascade do |t|

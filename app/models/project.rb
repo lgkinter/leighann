@@ -1,10 +1,17 @@
 class Project < ApplicationRecord
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :finders]
+
   validates :title, presence: true
   validates :subtitle, presence: true
   mount_uploader :index_pic, PictureUploader, presence: true
   mount_uploaders :profile_pics, PictureUploader
   validate :picture_size
   serialize :profile_pics, Array
+
+  def should_generate_new_friendly_id?
+    new_record?
+  end
 
   private
 
