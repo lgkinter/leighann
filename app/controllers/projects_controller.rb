@@ -22,6 +22,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.friendly.find(params[:id])
+    @letterings = Lettering.all
   end
 
   def edit

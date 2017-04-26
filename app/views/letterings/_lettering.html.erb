@@ -1,9 +1,9 @@
-<% @letterings.each do |lettering| %>
-  <div class="grid-item" id="lettering-<%= lettering.id %>">
-    <div class="lettering_pic">
-      <%= link_to(project) do %>
-        <%= image_tag(lettering.image.url) %>
-      <% end %>
-    </div>
+<div id="letterings">
+  <% @letterings.each do |lettering| %>
+    <div class="col-md-4 col-sm-6 col-xs-12 grid-item" id="lettering-<%= lettering.id %>">
+      <div class="lettering_pic">
+        <%= link_to image_tag(lettering.image.url), lettering.image.url,  data: {toggle: "lightbox", gallery: "lettering"} %>
+      </div>
+  </div>
+  <% end %>
 </div>
-<% end %>

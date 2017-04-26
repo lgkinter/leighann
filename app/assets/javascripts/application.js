@@ -17,5 +17,6 @@
 //= require bootstrap-sprockets
 //= require masonry/jquery.masonry
 //= require isotope/jquery.isotope
+//= require lightbox-bootstrap
 //= require script
 //= require_tree .

@@ -1,13 +1,27 @@
 $(document).ready(function () {
-        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-        if (window.location.hash && isChrome) {
-            setTimeout(function () {
-                var hash = window.location.hash;
-                window.location.hash = "";
-                window.location.hash = hash;
-            }, 300);
-        }
-    });
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (window.location.hash && isChrome) {
+        setTimeout(function () {
+            var hash = window.location.hash;
+            window.location.hash = "";
+            window.location.hash = hash;
+        }, 300);
+    }
+});
+
+$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
+
+$(document).on("turbolinks:load", function(){
+  $('#letterings').isotope({
+    itemSelector: '.grid-item',
+    layoutMode: 'masonry',
+    isFitWidth: true
+  });
+});
+
 
 $(document).ready(function(){
     var scroll_start = 0;
@@ -78,6 +92,7 @@ $(document).ready(function(){
 
   $(window).resize(function () {
     projects.isotope();
+    $('#letterings').isotope();
   });
 
   $('.portfolio-filter button').on("click", function() {
