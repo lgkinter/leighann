@@ -15,10 +15,12 @@ $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
 });
 
 $(document).on("turbolinks:load", function(){
-  $('#letterings').isotope({
-    itemSelector: '.grid-item',
-    layoutMode: 'masonry',
-    isFitWidth: true
+  $('#letterings').imagesLoaded( function (){
+    $('#letterings').isotope({
+      itemSelector: '.grid-item',
+      layoutMode: 'masonry',
+      isFitWidth: true
+    });
   });
 });
 

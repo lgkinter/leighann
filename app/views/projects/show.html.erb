@@ -1,7 +1,7 @@
 <!-- ==============================================
     Navbar
     =============================================== -->
-<nav class="navbar navbar-fixed-top overlay-nav nav-transparent sticky-nav nav-border-bottom no-transition" role="navigation">
+<nav class="main_navbar navbar navbar-fixed-top overlay-nav nav-transparent sticky-nav nav-border-bottom no-transition" role="navigation">
         <div class="container no-padding">
             <div class="row">
                 <div class="logo col-md-1 col-sm-1 col-xs-6 no-padding">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="right-nav col-md-11 col-sm-11 text-right">
                   <div class="nav navbar-nav navbar-right text-uppercase">
-                    <%= link_to "Back to Portfolio", root_path(anchor: "portfolio-link"), class: "back-button" %>
+                    <%= link_to "Back to Portfolio", root_path(anchor: "portfolio-link"), class: "back-button", method: :get %>
                 </div>
               </div>
             </div>
