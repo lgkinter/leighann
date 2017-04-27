@@ -203,9 +203,9 @@ function displayDetails(d) {
 }
 
 function defaultDetails() {
-    d3.select("#skills-name").text("Experiment");
+    d3.select("#skills-name").text("Skills & Tools");
     d3.select("#skills-years").text("");
-    d3.select("#skills-description").text("Try It Out");
+    d3.select("#skills-description").text("Click any tile to zoom in and click the center to zoom out.");
 }
 
 function mouseOver(d) {

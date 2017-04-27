@@ -5,12 +5,11 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    @contact.request = request
-    # if @contact.deliver
-    if @contact.valid
-      @submitted = true
-    else
-      flash.now[:error] = "Cannot send message."
+    if @contact.valid?
+      ContactMailer.contact_me(@contact).deliver_now
+      respond_to do |format|
+        format.js { render 'contacts/thank_you'}
+      end
     end
   end
 

@@ -21,3 +21,7 @@
 
 en:
   hello: "Hello world"
+
+  contact_mailer:
+    contact_me:
+      subject: "Message from LeighannKinter.com"

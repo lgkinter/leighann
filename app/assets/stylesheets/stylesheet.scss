@@ -424,30 +424,52 @@ section{
   background: linear-gradient(to right, #EF3F56, #FA9883); /* Standard syntax (must be last) */
 } /*Peach to Wine*/
 
-.personal-name h1 {font-size:45px; letter-spacing:3px; line-height: 50px;}
-.title-number {color: #fff; display: block; font-size: 55px; font-weight: 100; margin-bottom: 25px; left: -1px; letter-spacing: -2px; position:relative }
-.margin-six{ margin-top:10%; margin-bottom:10%}
-.section-title{ text-transform: uppercase; font-weight: 500; font-size: 30px; letter-spacing: 1px; padding: 0 0 0px 0;}
-.text-large { font-size: 20px; line-height: 30px; letter-spacing: 2px;}
-.highlight-button { display: inline-block; padding: 8px 20px 9px; font-size: 20px; background-color: #fac3a4;   }
-img.img-responsive { display: table-cell; max-width: 100%; }
-.medium-icon {
-    font-size: 50px;
-	color: #fff;
-    margin-bottom: 10px;
+.section-title{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 40px;
+  padding: 0;
+  margin: -15px 0 30px 0;
 }
-.section-icon {
-    font-size: 40px;
-	font-weight: bold;
-	border: 2px solid #fff;
-	border-radius: 50%;
-	background-color: #fff;
-	width: 80px;
-    height: 80px;
-	padding: 15px;
-	display: inline-block;
-	vertical-align: middle;
-	text-align: center;
+
+.section-subtitle {
+  font-size: 35px;
+  margin: 0;
+  font-family: 'Great Vibes', cursive;
+}
+
+.purple-font{
+  color: #4d173c;
+}
+
+.peach-font{
+  color: #FA9883;
+}
+
+.space-neg {
+  letter-spacing: -1px;
+}
+
+.space-1 {
+  letter-spacing: 1px;
+}
+
+.space-2 {
+  letter-spacing: 2px;
+}
+.space-6 {
+  letter-spacing: 6px;
+}
+
+.about-text {
+  font-size: 20px;
+}
+
+.highlight-button {
+  display: inline-block;
+  padding: 8px 20px 9px;
+  font-size: 20px;
+  background-color: #fac3a4;
 }
 
 /* General */
@@ -563,6 +585,11 @@ a.circle_border:after {
   margin: auto;
   font-size: 16px;
   color: black;
+}
+
+#thank-you-message {
+  color: #fff;
+  font-size: 18px;
 }
 
 label.error {
@@ -692,17 +719,33 @@ label.error {
 ====================================== */
 
 #skills-info-wrapper {
-
 }
 
 #skills-info {
   width: 300px;
   height: 400px;
   margin-top: 150px;
-  background: rgba(77,23,60, 0.5);
+  background: rgba(77,23,60,1);
   padding: 20px;
   color: white;
   font-size: 20px;
+}
+
+#skills-name {
+  text-transform: uppercase;
+}
+
+#skills-years {
+  font-size: 16px;
+  font-style: italic;
+}
+
+#skills-hr {
+  margin: 5px;
+}
+
+#skills-description {
+  font-size: 16px;
 }
 
 .skills-path {
@@ -765,8 +808,8 @@ text {
 .portfolio-active,
 .portfolio-filter > button:hover,
 {
-  border-bottom: 2px solid #ef3f56 !important;
-  color: #ef3f56 !important;
+  border-bottom: 2px solid #FA9883 !important;
+  color: #FA9883 !important;
   background-color: transparent !important;
 }
 
@@ -911,6 +954,7 @@ a img {
   margin: 0;
   font-family: 'Great Vibes', cursive;
 }
+
 .project-subtitle {
   margin: 0 0 30px 0;
   font-size: 1.5em;

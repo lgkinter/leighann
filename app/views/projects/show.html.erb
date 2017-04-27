@@ -62,7 +62,7 @@
         <ul>
           <li><strong>Date: </strong><%= @project.date %></li>
           <li><strong>Skills & Tools: </strong><%= @project.skills %></li>
-          <li><strong>Link: </strong><%= @project.link %></li>
+          <li><strong>Link: </strong><%= link_to @project.link, "http://www."+@project.link %></li>
         </ul>
         <h4>Project Overview</h4>
         <p><%= @project.overview %></p>
