@@ -259,7 +259,7 @@ section{
 .signature-svg {
   position: absolute;
   padding-left: 3px;
-  top: 700px;
+  top: 800px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -823,13 +823,13 @@ text {
 }
 
 @media (min-width: 768px) {
-  #projects .col-sm-6 {
-    width: 49.9%;
+  #projects .col-sm-6, #letterings .col-sm-6 {
+    width: 49.5%;
 }}
 
 @media (min-width: 992px) {
-  #projects .col-md-4 {
-    width: 33.3%;
+  #projects .col-md-4, #letterings .col-md-4 {
+    width: 33%;
 }}
 
 .grid-item a {
