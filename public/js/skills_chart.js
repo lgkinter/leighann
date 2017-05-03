@@ -1,160 +1,185 @@
-var height = 700; // Skills positioning and length of text
-var width = 700;
-var radius = (Math.min(height,width) / 2) - 10;
+//var height = 700; // Skills positioning and length of text
+//var width = 700;
+
+var div = document.getElementById("skills-wrapper");
+var svg = d3.select(div).append("svg")
+var g = svg.append("g");
+
+var radius;
+var width;
+var height;
+var x = d3.scale.linear().range([0, 2 * Math.PI]);
+var y;
+var arc;
 
 var padding = 5;
 var duration = 1000;
 var line_length = 10;
-//var centerDepth = 0;
 
 var formatNumber = d3.format(",d");
 
-var x = d3.scale.linear().range([0, 2 * Math.PI]);
-var y = d3.scale.linear().range([0, radius]);
-//var y = d3.scalePow().exponent(1.3).domain([0, 1]).range([0, radius]);
+function redraw(){
+  draw();
+};
 
-var div = d3.select("#skills-wrapper");
-var svg = div.append("svg")
-    .attr("class", "skills-svg")
-    .attr("width", width + padding * 2)
-    .attr("height", height)
-  .append("g")
-    .attr("transform", "translate(" + [radius + padding, radius + padding] + ")");
+function draw(){
 
-var partition = d3.layout.partition()
-  .sort(null)
-  .value(function(d) { return d.size; });
+  // Extract the width and height that was computed by CSS.
+  d3.selectAll("#center-label").remove();
+  d3.selectAll("#center-label-background").remove();
 
-var arc = d3.svg.arc()
-  .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x))); })
-  .endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x + d.dx))); })
-  .innerRadius(function(d) { return Math.max(0, d.y ? y(d.y) : d.y); })
-  .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
+  width = div.clientWidth;
+  height = width;
+  radius = (Math.min(height,width) / 2) - 10;
+  y = d3.scale.linear().range([0, radius]);
 
-var labelFits = function(d) { return x(d.x + d.dx) - x(d.x) > 0.05; };
+  svg.attr("class", "skills-svg")
+      .attr("width", width) // removed + padding * 2
+      .attr("height", height);
 
-d3.json("js/skills.json", function(error, root) {
-  if (error) throw error;
+  g.attr("transform", "translate(" + [radius + padding, radius + padding] + ")");
 
-  var nodes = partition.nodes(root);
+  var partition = d3.layout.partition()
+    .sort(null)
+    .value(function(d) { return d.size; });
 
-  var path = svg.selectAll("path").data(nodes);
-  path.enter().append("path")
-    .attr("class", "skills-path")
-    .attr("id", function(d, i) { return "path-" + i; })
-    .attr("d", arc)
-    .attr("fill-rule", "evenodd")
-    .style("fill", function(d) { return colors(d); })
-    .on("click", function(d) {
-        return d.depth < 4 ? click(d) : click(d.parent)
-    })
-    .on("mouseover", mouseOver).on("mouseout", mouseOut);
+  arc = d3.svg.arc()
+    .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x))); })
+    .endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x + d.dx))); })
+    .innerRadius(function(d) { return Math.max(0, d.y ? y(d.y) : d.y); })
+    .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
 
-  var text = svg.selectAll("text").data(nodes);
+  var labelFits = function(d) { return x(d.x + d.dx) - x(d.x) > 0.05; };
 
-  var textEnter = text.enter().append("text")
-    .style("fill-opacity", 1)
-    .style("fill", function(d) { return labelFits(d) ? "white" : "none"; })
-    .attr("text-anchor", function(d) { return x(d.x + d.dx / 2) > Math.PI ? "end" : "start"; })  // Checks whether on right or left
-    .attr("dy", ".35em")
-    .attr("transform", function(d) {
-        var multiline = (d.name || "").split(' ').length > 1;
-        var angle = x(d.x + d.dx / 2) * 180 / Math.PI - 90;
-        var rotate = angle + (multiline ? -.5 : 0);
-        return "rotate(" + rotate + ")translate(" + (y(d.y) + padding) + ")rotate(" + (angle > 90 ? -180 : 0) + ")"; // -180 rotation if on left side
-    });
+  d3.json("js/skills.json", function(error, root) {
+    if (error) throw error;
 
-  // First line truncate long text with ellipsis
-  textEnter.append("tspan")
-      .attr("x", 0)
-      .text(function(d) {
-        return split_lines(d)[0];
+    var nodes = partition.nodes(root);
+
+    var path = g.selectAll("path").data(nodes);
+    path.enter().append("path")
+      .attr("class", "skills-path")
+      .attr("id", function(d, i) { return "path-" + i; })
+      .attr("d", arc)
+      .attr("fill-rule", "evenodd")
+      .style("fill", function(d) { return colors(d); })
+      .on("click", function(d) {
+          return d.depth < 4 ? click(d) : click(d.parent)
+      })
+      .on("mouseover", mouseOver).on("mouseout", mouseOut);
+
+    var text = g.selectAll("text").data(nodes);
+
+    var textEnter = text.enter().append("text")
+      .style("fill-opacity", 1)
+      .style("fill", function(d) { return labelFits(d) ? "white" : "none"; })
+      .attr("text-anchor", function(d) { return x(d.x + d.dx / 2) > Math.PI ? "end" : "start"; })  // Checks whether on right or left
+      .attr("dy", ".35em")
+      .attr("transform", function(d) {
+          var multiline = (d.name || "").split(' ').length > 1;
+          var angle = x(d.x + d.dx / 2) * 180 / Math.PI - 90;
+          var rotate = angle + (multiline ? -.5 : 0);
+          return "rotate(" + rotate + ")translate(" + (y(d.y) + padding) + ")rotate(" + (angle > 90 ? -180 : 0) + ")"; // -180 rotation if on left side
       });
 
-  // Second line
-  textEnter.append("tspan")
-      .attr("x", 0)
-      .attr("dy", "1.1em")
-      .text(function(d) {
-        return split_lines(d)[1];
-      });
-
-  // Center circle
-  d3.select(".skills-svg")
-    .append("circle")
-    .attr("id", "center-label-background")
-    .attr("cx", radius+padding)
-    .attr("cy", radius+padding)
-    .attr("r", 19)
-    .attr("fill", "transparent")
-    .attr("pointer-events", "none");
-
-  // Center circle label
-  d3.select(".skills-svg")
-    .append("text")
-    .attr("id", "center-label")
-    .text("Skills")
-    .style("font-family", "Open Sans")
-    .style("font-size", "20px")
-    .attr("x", radius+padding)
-    .attr("y", radius+padding*2)
-    .attr("text-anchor", "middle")
-    .attr("pointer-events", "none");
-
-  function click(d) {
-    path.transition()
-      .duration(duration)
-      .attrTween("d", arcTween(d))
-      .each("end", function(d, i) {
-        d3.select(text[0][i]).style("fill", function(d) {
-            return labelFits(d) ? "white" : "none";
+    // First line truncate long text with ellipsis
+    textEnter.append("tspan")
+        .attr("x", 0)
+        .text(function(d) {
+          return split_lines(d)[0];
         });
-      });
 
-      text.style("visibility", function(e) {
-          return isParentOf(d, e) ? null : d3.select(this).style("visibility");
-        })
-        .transition()
+    // Second line
+    textEnter.append("tspan")
+        .attr("x", 0)
+        .attr("dy", "1.1em")
+        .text(function(d) {
+          return split_lines(d)[1];
+        });
+
+    // Center circle
+    d3.select(".skills-svg")
+      .append("circle")
+      .attr("id", "center-label-background")
+      .attr("cx", radius+padding)
+      .attr("cy", radius+padding)
+      .attr("r", 19)
+      .attr("fill", "transparent")
+      .attr("pointer-events", "none");
+
+    // Center circle label
+    d3.select(".skills-svg")
+      .append("text")
+      .attr("id", "center-label")
+      .text("Skills")
+      .style("font-family", "Open Sans")
+      .style("font-size", "20px")
+      .attr("x", radius+padding)
+      .attr("y", radius+padding*2)
+      .attr("text-anchor", "middle")
+      .attr("pointer-events", "none");
+
+    function click(d) {
+      path.transition()
         .duration(duration)
-        .attrTween("text-anchor", function(d) {
-          return function() {
-            return x(d.x + d.dx / 2) > Math.PI ? "end" : "start";
-          };
-        })
-        .attrTween("transform", function(d) {
-          var multiline = (d.name || "").split(" ").length > 1;
-          return function() {
-              var angle = x(d.x + d.dx / 2) * 180 / Math.PI - 90;
-              var rotate = angle + (multiline ? -.5 : 0);
-              return "rotate(" + rotate + ")translate(" + (y(d.y) + padding) + ")rotate(" + (angle > 90 ? -180 : 0) + ")";
-          };
-        })
-        .style("fill-opacity", function(e) {
-          return isParentOf(d, e) ? 1 : 1e-6;
-        })
-        .each("end", function(e) {
-          d3.select(this).style("visibility", isParentOf(d, e) ? null : "hidden");
+        .attrTween("d", arcTween(d))
+        .each("end", function(d, i) {
+          d3.select(text[0][i]).style("fill", function(d) {
+              return labelFits(d) ? "white" : "none";
+          });
         });
 
-        // Center label
-        if (d.depth == 0) {
-            d3.select("#center-label")
-              .text("Skills")
-              .style("font-family", "Open Sans")
-              .style("font-size", "20px");
-        } else {
-            d3.select("#center-label")
-              .style("font-family", "FontAwesome")
-              .style("font-size", "18px")
-              .text(function(d) { return '\uf010'; });
-            d3.select("#center-label-background")
-              .transition()
-              .delay(750)
-              .style("fill", colors(d.parent));
-        };
+        text.style("visibility", function(e) {
+            return isParentOf(d, e) ? null : d3.select(this).style("visibility");
+          })
+          .transition()
+          .duration(duration)
+          .attrTween("text-anchor", function(d) {
+            return function() {
+              return x(d.x + d.dx / 2) > Math.PI ? "end" : "start";
+            };
+          })
+          .attrTween("transform", function(d) {
+            var multiline = (d.name || "").split(" ").length > 1;
+            return function() {
+                var angle = x(d.x + d.dx / 2) * 180 / Math.PI - 90;
+                var rotate = angle + (multiline ? -.5 : 0);
+                return "rotate(" + rotate + ")translate(" + (y(d.y) + padding) + ")rotate(" + (angle > 90 ? -180 : 0) + ")";
+            };
+          })
+          .style("fill-opacity", function(e) {
+            return isParentOf(d, e) ? 1 : 1e-6;
+          })
+          .each("end", function(e) {
+            d3.select(this).style("visibility", isParentOf(d, e) ? null : "hidden");
+          });
 
-  };
-});
+          // Center label
+          if (d.depth == 0) {
+              d3.select("#center-label")
+                .text("Skills")
+                .style("font-family", "Open Sans")
+                .style("font-size", "20px");
+          } else {
+              d3.select("#center-label")
+                .style("font-family", "FontAwesome")
+                .style("font-size", "18px")
+                .text(function(d) { return '\uf010'; });
+              d3.select("#center-label-background")
+                .transition()
+                .delay(750)
+                .style("fill", colors(d.parent));
+          };
+
+    };
+  });
+};
+
+// Draw for the first time to initialize.
+draw();
+
+// Redraw based on the new size whenever the browser window is resized.
+window.addEventListener("resize", redraw);
 
 function split_lines(d) {
   var first = d.name;

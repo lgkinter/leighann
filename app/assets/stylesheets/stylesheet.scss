@@ -146,6 +146,10 @@ section {
   position: relative;
 }
 
+.main_nav a{
+  text-align: center;
+}
+
 .sticky-nav{
   position: fixed;
   top: 0px;
@@ -246,6 +250,7 @@ section {
 .container {
   width: 100%;
   padding-right: 0;
+  padding-left: 0;
 }
 
 section{
@@ -377,6 +382,11 @@ section{
   width: 100%;
   padding: 0;
 }
+
+.arrow_row {
+  height: 80px;
+}
+
 .padding-top-60{
   padding: 60px 0;
 }
@@ -722,7 +732,7 @@ label.error {
 }
 
 #skills-info {
-  width: 300px;
+  width: 85%;
   height: 400px;
   margin-top: 150px;
   background: rgba(77,23,60,1);
@@ -975,4 +985,16 @@ a img {
   width: auto;
   margin: 0 0 15px 0;
 
+}
+
+/* ===================================
+    Responsive
+====================================== */
+
+
+@media (max-width: 992px)
+{
+    #main_img_2 { display: none; }
+    #main_img_3 { display: none; }
+    #skills-info { margin-top: 0; }
 }
