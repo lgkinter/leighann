@@ -264,11 +264,11 @@ section{
 .signature-svg {
   position: absolute;
   padding-left: 3px;
-  top: 800px;
+  top: 65px;
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto;
+  margin: 0;
 }
 
 .signature-path {
@@ -300,6 +300,7 @@ section{
 .flower-path {
   transition: 300ms all;
   transform-origin: 50% 50%;
+  transform-box: fill-box;
 }
 
 
@@ -794,6 +795,15 @@ text {
 
 #portfolio .container-fluid {
   padding: 0 0 20px 0;
+}
+
+.portfolio-img {
+  width: 100%;
+}
+
+.portfolio-hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .portfolio-filter > button,

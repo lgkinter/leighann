@@ -56,11 +56,13 @@
         <% if @project.slug == 'lettering' %>
           <%= render partial: '/letterings/lettering' %>
         <% elsif !@project.profile_pics.empty? %>
-          <%= image_tag @project.profile_pics[1].url  %>
+          <% @project.profile_pics.each do |pic| %>
+            <%= image_tag pic.url, class:"portfolio-img" %>
+          <% end %>
         <% end %>
       </div>
       <div class="col-md-4">
-        <h4>Project Specs</h4>
+        <h4>Project Details</h4><hr class="portfolio-hr">
         <ul>
           <li><strong>Date: </strong><%= @project.date %></li>
           <li><strong>Skills & Tools: </strong><%= @project.skills %></li>
@@ -72,7 +74,8 @@
             <% end %>
           </li>
         </ul>
-        <h4>Project Overview</h4>
+        <br>
+        <h4>Project Overview</h4><hr class="portfolio-hr">
         <p><%= @project.overview %></p>
       </div>
     </div>

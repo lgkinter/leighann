@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
     if @contact.valid?
       ContactMailer.contact_me(@contact).deliver_now
       respond_to do |format|
-        format.js { render 'contacts/thank_you'}
+        format.js { render partial: 'contacts/thank_you'}
       end
     end
   end
