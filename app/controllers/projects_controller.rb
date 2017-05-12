@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :sbed]
 
   def index
     @contact = Contact.new
@@ -43,6 +43,9 @@ class ProjectsController < ApplicationController
     Project.friendly.find(params[:id]).destroy
     flash[:alert] = "Project has been successfully deleted."
     redirect_to root_path
+  end
+
+  def sbed
   end
 
   private

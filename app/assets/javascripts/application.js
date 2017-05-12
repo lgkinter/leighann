@@ -18,5 +18,6 @@
 //= require masonry/jquery.masonry
 //= require isotope/jquery.isotope
 //= require lightbox-bootstrap
+//= require 'greensock/TweenMax'
 //= require script
 //= require_tree .

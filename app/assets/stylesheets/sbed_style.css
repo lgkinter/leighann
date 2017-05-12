@@ -99,43 +99,8 @@
   transform: translate(-50%);
 }
 
-.tray {
-  transition: 300ms all;
-  transform-origin: 50% 50%;
-}
-
-.tray:hover {
-  transform: scale(1.1);
-}
-
-.bulletin {
-  transition: 300ms all;
-  transform-origin: 50% 0%;
-}
-
 .light {
   opacity: 0;
-}
-
-.single-book {
-  transition: 300ms all;
-  transform-origin: 0% 100%;
-}
-
-.books-group:hover .single-book {
-  -ms-transform: rotate(-30deg); /* IE 9 */
-  -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
-  transform: rotate(-30deg);
-}
-
-.paper {
-  transition: 300ms all;
-  transform-origin: 50% 50%;
-}
-
-.receiver {
-  transition: 300ms all;
-  transform-origin: 50% 50%;
 }
 
 @keyframes ring {

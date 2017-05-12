@@ -1,66 +1,135 @@
 $(document).ready(function(){
-     $(".lamp").mouseenter(function(){
-       $(".light").css("opacity", ".3");
-       $(".bulb").css("fill", "#ffffb3");
-     });
-     $(".lamp").mouseleave(function(){
-       $(".light").css("opacity", "0");
-       $(".bulb").css("fill", "#fff");
-     });
 
-     $(".computer, .screen-off, #web-nav").mouseenter(function(){
-        $(".screen-off").css("opacity", "0");
-        $("#web-nav").css('border-bottom', '3px solid #fb6a59');
-        $("#web-nav a").css('color', '#fb6a59');
-     });
-     $(".computer, screen-off, #web-nav").mouseleave(function(){
-       $(".screen-off").css("opacity", "1");
-       $("#web-nav").css('border-bottom', '');
-       $("#web-nav a").css('color', '#555');
-     });
+    $(".tray").hover(tray_over, tray_out);
 
-     $("#phone-nav, .phone").mouseenter(function(){
-       $('.receiver').css("animation", "80ms ring 6");
-       $("#phone-nav").css('border-bottom', '3px solid #80b1d3');
-       $("#phone-nav a").css('color', '#80b1d3');
-     });
+    function tray_over(){
+      TweenMax.to($(".tray"), 0.3, {
+        transformOrigin: "50% 50%",
+        x: '-=15',
+        y: '+=10',
+        scale:1.1
+      });
+    };
 
-     $("#phone-nav, .phone").mouseleave(function(){
-       $('.receiver').css("animation", "");
-       $("#phone-nav").css('border-bottom', '');
-       $("#phone-nav a").css('color', '#555');
-     });
+    function tray_out(){
+      TweenMax.to($(".tray"), 0.3, {
+        x: '+=15',
+        y: '-=10',
+        scale:1
+      });
+    };
 
-     $('#team-nav, .bulletin').mouseenter(function(){
-       $('.bulletin').css('-ms-transform', 'rotate(-20deg)');
-       $('.bulletin').css('-webkit-transform', 'rotate(-20deg)');
-       $('.bulletin').css('transform', 'rotate(-20deg)');
-       $("#team-nav").css('border-bottom', '3px solid #faa342');
-       $("#team-nav a").css('color', '#faa342');
-     });
+    $(".books-group").hover(book_over, book_out);
 
-     $('#team-nav, .bulletin').mouseleave(function(){
-       $('.bulletin').css('-ms-transform', 'rotate(0deg)');
-       $('.bulletin').css('-webkit-transform', 'rotate(0deg)');
-       $('.bulletin').css('transform', 'rotate(0deg)');
-       $("#team-nav").css('border-bottom', '');
-       $("#team-nav a").css('color', '#555');
-     });
+    function book_over(){
+      TweenMax.to($(".single-book"), 0.3, {
+        transformOrigin: "0% 100%",
+        rotation: -30
+      });
+    };
 
-     $('#marketing-nav, .rolodex').mouseenter(function(){
-       $('.paper').css('-ms-transform', 'rotate(10deg) rotateX(30deg) translate(-3px, -2px)');
-       $('.paper').css('-webkit-transform', 'rotate(10deg) rotateX(30deg) translate(-3px, -2px)');
-       $('.paper').css('transform', 'rotate(10deg) rotateX(30deg) translate(-3px, -2px)');
-       $("#marketing-nav").css('border-bottom', '3px solid #4cc18e');
-       $("#marketing-nav a").css('color', '#4cc18e');
-     });
+    function book_out(){
+      TweenMax.to($(".single-book"), 0.3, {
+        rotation: 0
+      });
+    };
 
-     $('#marketing-nav, .rolodex').mouseleave(function(){
-       $('.paper').css('-ms-transform', '');
-       $('.paper').css('-webkit-transform', '');
-       $('.paper').css('transform', '');
-       $("#marketing-nav").css('border-bottom', '');
-       $("#marketing-nav a").css('color', '#555');
-     });
+    $(".lamp").hover(lamp_over, lamp_out);
+
+    function lamp_over(){
+      TweenMax.to($(".light"), 0.3, { opacity:.3 });
+      TweenMax.to($(".bulb"), 0.3, { fill: "#ffffb3" });
+    };
+
+    function lamp_out(){
+      TweenMax.to($(".light"), 0.3, { opacity: 0 });
+      TweenMax.to($(".bulb"), 0.3, { fill: "#fff" });
+    };
+
+    $(".computer, .screen-off, #web-nav").hover(computer_over, computer_out);
+
+    function computer_over(){
+      TweenMax.to($(".screen-off"), 0.3, { opacity: 0 });
+      TweenMax.to($("#web-nav"), 0.3, { borderBottom: '3px solid #fb6a59' });
+      TweenMax.to($("#web-nav a"), 0.3, { color: "#fb6a59" });
+    };
+
+    function computer_out(){
+      TweenMax.to($(".screen-off"), 0.3, { opacity: 1 });
+      TweenMax.to($("#web-nav"), 0.3, { borderBottom: '' });
+      TweenMax.to($("#web-nav a"), 0.3, { color: "#555" });
+    };
+
+    $("#phone-nav, .phone").hover(phone_over, phone_out);
+
+    function phone_over(){
+      var tl = new TimelineMax();
+      tl.add(TweenMax.from($(".receiver"), 0.08, {
+        transformOrigin: "50% 50%",
+        rotation: -10,
+        repeat: 6,
+        yoyo: true,
+        ease:Linear.easeNone
+      }));
+      tl.add(TweenMax.to($(".receiver"), 0.08, {
+        rotation: 10,
+        repeat: 6,
+        yoyo: true,
+        ease:Linear.easeNone
+      }));
+      tl.add(TweenMax.to($(".receiver"), 0.08, {
+        rotation: 0,
+      }));
+      TweenMax.to($("#phone-nav"), 0.3, { borderBottom: '3px solid #80b1d3' });
+      TweenMax.to($("#phone-nav a"), 0.3, { color: "#80b1d3" });
+    };
+
+    function phone_out(){
+      TweenMax.to($("#phone-nav"), 0.3, { borderBottom: '' });
+      TweenMax.to($("#phone-nav a"), 0.3, { color: "#555" });
+    };
+
+    $("#team-nav, .bulletin").hover(bulletin_over, bulletin_out);
+
+    function bulletin_over(){
+      TweenMax.to($(".bulletin"), 0.3, {
+        transformOrigin: '50% 0%',
+        rotation: -30
+      });
+      TweenMax.to($("#team-nav"), 0.3, { borderBottom: '3px solid #faa342' });
+      TweenMax.to($("#team-nav a"), 0.3, { color: "#faa342" });
+    };
+
+    function bulletin_out(){
+      TweenMax.to($(".bulletin"), 0.3, { rotation: 0 });
+      TweenMax.to($("#team-nav"), 0.3, { borderBottom: '' });
+      TweenMax.to($("#team-nav a"), 0.3, { color: "#555" });
+    };
+
+    $("#marketing-nav, .rolodex").hover(rolodex_over, rolodex_out);
+
+    function rolodex_over(){
+      TweenMax.to($(".paper"), 0.3, {
+        transformOrigin: '50% 50%',
+        rotation: 10,
+        rotationX: 30,
+        x: '-=3',
+        y: '-=3'
+      });
+      TweenMax.to($("#marketing-nav"), 0.3, { borderBottom: '3px solid #4cc18e' });
+      TweenMax.to($("#marketing-nav a"), 0.3, { color: "#4cc18e" });
+    };
+
+    function rolodex_out(){
+      TweenMax.to($(".paper"), 0.3, {
+        transformOrigin: '50% 50%',
+        rotation: 0,
+        rotationX: 0,
+        x: '0',
+        y: '0'
+      });
+      TweenMax.to($("#marketing-nav"), 0.3, { borderBottom: '' });
+      TweenMax.to($("#marketing-nav a"), 0.3, { color: "#555" });
+    };
 
 });
