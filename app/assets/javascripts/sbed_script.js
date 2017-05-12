@@ -63,21 +63,21 @@ $(document).ready(function(){
     $("#phone-nav, .phone").hover(phone_over, phone_out);
 
     function phone_over(){
-      var tl = new TimelineMax();
-      tl.add(TweenMax.from($(".receiver"), 0.08, {
+      var t1 = new TimelineMax();
+      t1.add(TweenMax.from($(".receiver"), 0.08, {
         transformOrigin: "50% 50%",
         rotation: -10,
         repeat: 6,
         yoyo: true,
         ease:Linear.easeNone
       }));
-      tl.add(TweenMax.to($(".receiver"), 0.08, {
+      t1.add(TweenMax.to($(".receiver"), 0.08, {
         rotation: 10,
         repeat: 6,
         yoyo: true,
         ease:Linear.easeNone
       }));
-      tl.add(TweenMax.to($(".receiver"), 0.08, {
+      t1.add(TweenMax.to($(".receiver"), 0.08, {
         rotation: 0,
       }));
       TweenMax.to($("#phone-nav"), 0.3, { borderBottom: '3px solid #80b1d3' });

@@ -169,32 +169,27 @@ section {
 }
 
 #logo-link:hover .logo-background {
-  stroke: #FA9883;
+  stroke: #fff;
+}
+
+#logo-link:hover .initials {
+  stroke: #4d173c;
 }
 
 .initials {
   opacity: 0;
   stroke: #fff;
   stroke-width: 30;
-  stroke-dasharray: 54500;
-  animation: draw_initials 4s 3s reverse 1 forwards;
+  stroke-dasharray: 25000;
+  /*animation: draw_initials 4s 3s reverse 1 forwards; */
 }
 
 .logo-background {
-  stroke-dasharray: 54500;
+  stroke-dasharray: 60000;
   stroke: #4d173c;
   stroke-width: 15;
-  animation: draw_logo 4s reverse 1;
 }
-
-@keyframes draw_logo {
-  from {
-    stroke-dashoffset: 0;
-  } to {
-    stroke-dashoffset: 54500;
-  }
-}
-
+/*
 @keyframes draw_initials {
   from {
     stroke-dashoffset: 0;
@@ -204,7 +199,7 @@ section {
     stroke-dashoffset: 54500;
     opacity: 1;
   }
-}
+}*/
 
 .sticky-nav .logo {
   height: 97px;
@@ -263,7 +258,7 @@ section{
 
 .signature-svg {
   position: absolute;
-  padding-left: 3px;
+  padding-left: 15px;
   top: 65px;
   right: 0;
   bottom: 0;
@@ -273,35 +268,11 @@ section{
 
 .signature-path {
   stroke-dasharray: 59000;
-  animation: draw_signature 4s reverse 1;
-}
-
-@keyframes draw_signature {
-  from {
-    stroke-dashoffset: 0;
-  } to {
-    stroke-dashoffset: 59000;
-  }
 }
 
 .flower-path {
   stroke-dasharray: 25000;
-  animation: draw_flowers 4s reverse 1;
 }
-
-@keyframes draw_flowers {
-  from {
-    stroke-dashoffset: 0;
-  } to {
-    stroke-dashoffset: 25000;
-  }
-}
-
-.flower-path {
-  transition: 300ms all;
-  transform-origin: 50% 50%;
-}
-
 
 .left-flower-fill, .middle-flower-fill {
   opacity: 0.5;
@@ -325,53 +296,6 @@ section{
   stroke-width: 8;
 }
 
-#left-flower:hover {
-  transform: scale(1.2) translate(-30%, -40%);
-}
-
-#middle-flower:hover {
-  transform: scale(1.2) translate(-33%, -30%);
-}
-
-#right-flower:hover {
-  transform: scale(1.2) translate(-34%, -35%);
-}
-
-#left-flower:hover .left-flower-img,
-#middle-flower:hover .middle-flower-img,
-#right-flower:hover .right-flower-img{
-  opacity: 1;
-}
-
-#left-flower:hover .left-flower-fill,
-#middle-flower:hover .middle-flower-fill,
-#right-flower:hover .right-flower-fill{
-  opacity: 0;
-}
-
-#left-flower:hover .left-flower-top,
-#middle-flower:hover .middle-flower-top {
-  stroke: #4d173c;
-  stroke-width: 20;
-}
-
-#right-flower:hover .right-flower-top{
-  stroke: #4d173c;
-  stroke-width: 20;
-}
-
-#left-flower:hover .left-flower-bottom,
-#middle-flower:hover .middle-flower-bottom {
-  stroke: #EF3F56;
-  stroke-width: 8;
-}
-
-#right-flower:hover .right-flower-bottom{
-  stroke: #FA9883;
-  stroke-width: 8;
-}
-
-
 
 /* ===================================
     Other Pages
@@ -388,7 +312,11 @@ section{
 }
 
 .padding-top-60{
-  padding: 60px 0;
+  padding-top: 60px;
+}
+
+.padding-right-50 {
+  padding-right: 50px;
 }
 
 #home { z-index: 5;
@@ -470,16 +398,21 @@ section{
 .space-6 {
   letter-spacing: 6px;
 }
+.oneliner {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
 
 .about-text {
-  font-size: 20px;
+  font-size: 17px;
+  margin-bottom: 20px;
 }
 
 .highlight-button {
   display: inline-block;
   padding: 8px 20px 9px;
   font-size: 20px;
-  background-color: #fac3a4;
+  background-color: #FA9883;
 }
 
 /* General */

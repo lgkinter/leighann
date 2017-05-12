@@ -26,6 +26,151 @@ $(document).on("turbolinks:load", function(){
 
 
 $(document).ready(function(){
+
+  TweenMax.fromTo($('.flower-path'), 5, {
+    ease: Power1.easeInOut,
+    strokeDashoffset:25000
+  },
+  {
+    ease: Power1.easeInOut,
+    strokeDashoffset:0
+  });
+
+  TweenMax.fromTo($('.signature-path'), 5, {
+    ease: Power1.easeInOut,
+    strokeDashoffset:59000
+  },
+  {
+    ease: Power1.easeInOut,
+    strokeDashoffset:0
+  });
+
+  TweenMax.fromTo($('.logo-background'), 5, {
+    ease: Power1.easeInOut,
+    strokeDashoffset:60000
+  },
+  {
+    ease: Power1.easeInOut,
+    strokeDashoffset:0
+  });
+
+  var t1 = new TimelineMax();
+  t1.append(TweenMax.to($('.initials'), 0, {
+    opacity: 0
+  }));
+  t1.append(TweenMax.to($('.initials'), 0, {
+    ease: Power1.easeInOut,
+    strokeDashoffset:25000,
+    delay: 4,
+    opacity: 1
+  }));
+  t1.append(TweenMax.to($('.initials'), 2, {
+    ease: Power1.easeInOut,
+    strokeDashoffset:0
+  }));
+
+  $("#left-flower").hover(left_over, left_out);
+
+  function left_over(){
+    TweenMax.to($(this), 0.3, {
+      transformOrigin: "50% 50%",
+      x: '-=150',
+      y: '-=5',
+      scale:1.2
+    });
+    TweenMax.to($('.left-flower-img'), 0.3, { opacity:1 });
+    TweenMax.to($('.left-flower-fill'), 0.3, { opacity:0 });
+    TweenMax.to($('.left-flower-top'), 0.3, {
+      stroke: '#4d173c',
+      strokeWidth: 20
+    });
+    TweenMax.to($('.left-flower-bottom'), 0.3, { stroke: '#EF3F56' });
+  };
+
+  function left_out(){
+    TweenMax.to($(this), 0.3, {
+      transformOrigin: "50% 50%",
+      x: '',
+      y: '',
+      scale:1
+    });
+    TweenMax.to($('.left-flower-top'), 0.3, {
+      stroke: '#fff',
+      strokeWidth: 15
+    });
+    TweenMax.to($('.left-flower-bottom'), 0.3, { stroke: '#fff' });
+    TweenMax.to($('.left-flower-img'), 0.3, { opacity:0 });
+    TweenMax.to($('.left-flower-fill'), 0, { opacity:1 });
+  };
+
+  $("#middle-flower").hover(mid_over, mid_out);
+
+  function mid_over(){
+    TweenMax.to($(this), 0.3, {
+      transformOrigin: "50% 50%",
+      x: '+=50',
+      scale:1.2
+    });
+    TweenMax.to($('.middle-flower-img'), 0.3, { opacity:1 });
+    TweenMax.to($('.middle-flower-fill'), 0.3, { opacity:0 });
+    TweenMax.to($('.middle-flower-top'), 0.3, {
+      stroke: '#4d173c',
+      strokeWidth: 20
+    });
+    TweenMax.to($('.middle-flower-bottom'), 0.3, { stroke: '#EF3F56' });
+  };
+
+  function mid_out(){
+    TweenMax.to($(this), 0.3, {
+      transformOrigin: "50% 50%",
+      x: '',
+      scale:1
+    });
+    TweenMax.to($('.middle-flower-top'), 0.3, {
+      stroke: '#fff',
+      strokeWidth: 15
+    });
+    TweenMax.to($('.middle-flower-bottom'), 0.3, { stroke: '#fff' });
+    TweenMax.to($('.middle-flower-img'), 0.3, { opacity:0 });
+    TweenMax.to($('.middle-flower-fill'), 0, { opacity:1 });
+  };
+
+  $("#right-flower").hover(right_over, right_out);
+
+  function right_over(){
+    TweenMax.to($(this), 0.3, {
+      transformOrigin: "50% 50%",
+      x: '+=80',
+      y: '-=50',
+      scale:1.2
+    });
+    TweenMax.to($('.right-flower-img'), 0.3, { opacity:1 });
+    TweenMax.to($('.right-flower-fill'), 0.3, { opacity:0 });
+    TweenMax.to($('.right-flower-top'), 0.3, {
+      stroke: '#4d173c',
+      strokeWidth: 20
+    });
+    TweenMax.to($('.right-flower-bottom'), 0.3, { stroke: '#FA9883' });
+  };
+
+  function right_out(){
+    TweenMax.to($(this), 0.3, {
+      transformOrigin: "50% 50%",
+      x: '',
+      y: '',
+      scale:1
+    });
+    TweenMax.to($('.right-flower-top'), 0.3, {
+      stroke: '#fff',
+      strokeWidth: 15
+    });
+    TweenMax.to($('.right-flower-bottom'), 0.3, { stroke: '#fff' });
+    TweenMax.to($('.right-flower-img'), 0.3, { opacity:0 });
+    TweenMax.to($('.right-flower-fill'), 0, { opacity:1 });
+  };
+
+
+
     var scroll_start = 0;
     var $sections = $('section');
     var $currentSection;
