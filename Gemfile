@@ -40,6 +40,7 @@ gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 gem 'mini_magick', '~> 4.5.1'
 gem 'friendly_id', '~> 5.1.0'
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
+gem 'greensock-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
