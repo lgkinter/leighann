@@ -398,8 +398,9 @@ section{
 .space-6 {
   letter-spacing: 6px;
 }
+
 .oneliner {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
@@ -574,81 +575,6 @@ label.error {
   fill: #4d173c;
   opacity: 0;
 }
-
-
-/*
-.send-button:hover .button_border{
-    border-color: #4d173c;
-    background-color: rgba(255,255,255,0.25);
-    -webkit-appearance: none;
-    -webkit-box-shadow: 0 0 24px 0 #4d173c;
-    box-shadow: 0 0 24px 0 #4d173c;
-}
-
-.fly {
-    -webkit-transform: translate(100px, -50px);
-    -moz-transform: translate(100px, -50px);
-    -o-transform: translate(100px, -50px);
-    -ms-transform: translate(100px, -50px);
-    transform: translate(100px, -50px);
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-}
-
-.appears {
-    -webkit-animation: fadeIn 0.4s ease-out;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-delay: 0.4s;
-    -moz-animation: fadeIn 0.4s ease-out;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-fill-mode: forwards;
-    -moz-animation-delay: 0.4s;
-    animation: fadeIn 0.4s ease-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 0.4s;
-}
-
-@-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-   100% { opacity: 1; }
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.disappears {
-    -webkit-animation: fadeOut 0.4s ease-out;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-delay: 0.4s;
-    -moz-animation: fadeOut 0.4s ease-out;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-fill-mode: forwards;
-    -moz-animation-delay: 0.4s;
-    animation: fadeOut 0.4s ease-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 0.4s;
-}
-
-
-
-@-webkit-keyframes fadeOut {
-    0% { opacity: 1; }
-   100% { opacity: 0; }
-}
-
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
-}
- */
 
 .copyright {
 	background-color: #4d173c;
