@@ -575,17 +575,13 @@ label.error {
   opacity: 0;
 }
 
-#send-button:hover #plane, #send-button:hover #send {
-  fill: #4d173c;
-}
 
-#send-button:hover #box {
-  stroke: #4d173c;
-}
-
-.button_border:hover {
+/*
+.send-button:hover .button_border{
     border-color: #4d173c;
     background-color: rgba(255,255,255,0.25);
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 0 24px 0 #4d173c;
     box-shadow: 0 0 24px 0 #4d173c;
 }
 
@@ -641,6 +637,8 @@ label.error {
     animation-delay: 0.4s;
 }
 
+
+
 @-webkit-keyframes fadeOut {
     0% { opacity: 1; }
    100% { opacity: 0; }
@@ -650,7 +648,7 @@ label.error {
   0% { opacity: 1; }
   100% { opacity: 0; }
 }
-
+ */
 
 .copyright {
 	background-color: #4d173c;

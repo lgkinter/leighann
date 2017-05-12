@@ -170,6 +170,29 @@ $(document).ready(function(){
   };
 
 
+  $(".submit-button").hover(send_over, send_out);
+
+  function send_over(){
+      TweenMax.to($('.button_border'), 0, {
+        borderColor: '#4d173c',
+        backgroundColor:'rgba(255,255,255,0.25)',
+        boxShadow: '0 0 10px #4d173c'
+      });
+      TweenMax.to($('#plane'), 0, { fill: '#4d173c' });
+      TweenMax.to($('#send'), 0, { fill: '#4d173c' });
+  }
+
+  function send_out(){
+      TweenMax.to($('.button_border'), 0, {
+        borderColor: '#fff',
+        backgroundColor:'none',
+        boxShadow: ''
+      });
+      TweenMax.to($('#plane'), 0, { fill: '#fff' });
+      TweenMax.to($('#send'), 0, { fill: '#fff' });
+  }
+
+
 
     var scroll_start = 0;
     var $sections = $('section');
@@ -265,16 +288,33 @@ $(document).ready(function(){
 
 
 function fly() {
+  console.log("getting here");
   if ($("#contactform").valid()) {
-    $('#plane').addClass("fly");
-    $('#send').addClass("disappears");
+    TweenMax.to($('#plane'), 0.4, {
+      x: "+=100",
+      y: "-=55"
+    });
+    TweenMax.fromTo($('#send'), 0.4,
+      { opacity: 1},
+      { opacity: 0}
+    );
+    /*$('#plane').addClass("fly");
+    $('#send').addClass("disappears");*/
   };
 };
 
 function check() {
   if ($("#contactform").valid()) {
-    $('#check-mark').addClass("appears");
-    $('#sent').addClass("appears");
+    TweenMax.fromTo($('#check-mark'), 0.4,
+      { opacity: 0},
+      { opacity: 1}
+    );
+    TweenMax.fromTo($('#sent'), 0.4,
+      { opacity: 0},
+      { opacity: 1}
+    );
+    /*$('#check-mark').addClass("appears");
+    $('#sent').addClass("appears");*/
     $('#send-button').addClass("disabled");
   };
 };
