@@ -66,13 +66,13 @@ $(document).ready(function(){
       var t1 = new TimelineMax();
       t1.add(TweenMax.from($(".receiver"), 0.08, {
         transformOrigin: "50% 50%",
-        rotation: -10,
+        rotation: -15,
         repeat: 6,
         yoyo: true,
         ease:Linear.easeNone
       }));
       t1.add(TweenMax.to($(".receiver"), 0.08, {
-        rotation: 10,
+        rotation: 15,
         repeat: 6,
         yoyo: true,
         ease:Linear.easeNone

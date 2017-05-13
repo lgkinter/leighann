@@ -9,7 +9,7 @@
             <p class="project_subtitle"><%= project.subtitle %></p>
           </div>
         </div>
-        <%= image_tag(project.index_pic.url) %>
+        <%= image_tag project.index_pic.url, alt:project.index_pic.url[(project.index_pic.url.rindex('/') + 1)..-1].gsub(".jpg", "").gsub("-", " ")%>
       <% end %>
     </div>
 </div>

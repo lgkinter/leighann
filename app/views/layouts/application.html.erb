@@ -4,12 +4,30 @@
     <!-- ==============================================
         Meta Tags & Title
         =============================================== -->
-    <title>Leighann Kinter</title>
+    <title>
+      <% if yield(:title).present? %>
+          <%= yield(:title) %>
+      <% else %>
+          Leighann Kinter | Software Development | Data Visualization
+      <% end %>
+    </title>
+
     <%= csrf_meta_tags %>
     <meta charset= "UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <% if yield(:meta_description).present? %>
+      <meta name="description" content="<%= yield(:meta_description) %>" />
+    <% else %>
+      <meta name="description" content="Leighann Kinter's Portfolio - Data Visualization, Design and Software Development in Ruby on Rails" />
+    <% end %>
+
+    <% if yield(:meta_keywords).present? %>
+      <meta name="keywords" content="<%= yield(:meta_keywords) %>" />
+    <% else %>
+      <meta name="keywords" content="leighann kinter, data visualization, ruby on rails, hand lettering, software development, design" />
+    <% end %>
     <!-- ==============================================
         Stylesheets
         =============================================== -->
