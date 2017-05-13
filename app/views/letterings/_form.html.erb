@@ -1,0 +1,20 @@
+<br>
+<%= form_for @lettering, html: { multipart: true } do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <span class="picture">
+    <div class="field">
+      <%= f.label :image %><br>
+      <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
+    </div>
+
+  <div class="action">
+    <%= f.submit yield(:button_text) %>
+  </div>
+
+<% end %>

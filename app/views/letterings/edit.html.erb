@@ -1,0 +1,7 @@
+<% provide(:button_text, 'Update lettering') %>
+<h1 class="edit_project">Update Lettering</h1>
+
+<%= render 'form' %>
+
+<%= link_to "delete", @lettering, method: :delete,
+  data: { confirm: "Are you sure you want to permanently delete this lettering?" } %>

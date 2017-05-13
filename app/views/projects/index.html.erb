@@ -41,8 +41,8 @@
             </div>
         </nav>
     <div class="notifications">
-      <span class="notice"><%= notice %></span>
-      <span class="alert"><%= alert %></span>
+      <span class="notice"><%= notice if user_signed_in? %></span>
+      <span class="alert"><%= alert if user_signed_in? %></span>
     </div>
 
 		<!-- ==============================================
@@ -160,7 +160,7 @@
               <div class="col-md-12">
                   <h2 class="section-subtitle space-neg peach-font">get to know me</h2>
                   <h3 class="section-title space-2">About</h3>
-                  <p class="oneliner peach-font"> My name is Leighann. I'm a full stack web
+                  <p class="oneliner peach-font"> My name is Leighann. I'm a full stack software
                     developer and designer with a focus on data visualizations. </p>
                   <p class="about-text"> As artistically inclined mathematics enthusiast,
                     I’ve always been interested in the intersection of logic and

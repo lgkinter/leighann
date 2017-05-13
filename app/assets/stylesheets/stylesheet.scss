@@ -843,11 +843,11 @@ a img {
     Login
 ====================================== */
 
-.new_user, .new_project, .edit_project {
+.new_user, .new_project, .edit_project, .new_lettering, .edit_lettering {
   color: black;
 }
 
-.new_user input, .new_project input, .edit_project input {
+.new_user input, .new_project input, .edit_project input, .new_lettering input, .edit_lettering input {
   width: auto;
   margin: 0 0 15px 0;
 
