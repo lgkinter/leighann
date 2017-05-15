@@ -9,7 +9,7 @@ class LetteringsController < ApplicationController
     @lettering = Lettering.new(lettering_params)
     if @lettering.save
       flash[:alert] = "Lettering created!"
-      redirect_to "letterings#new"
+      redirect_to new_lettering_path
     else
       render "new"
     end
