@@ -38,6 +38,7 @@ gem 'rails_admin', '~> 1.1.1'
 # Multiple image upload
 gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 gem 'mini_magick', '~> 4.5.1'
+gem 'fog', '~> 1.38.0'
 gem 'friendly_id', '~> 5.1.0'
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
 gem 'greensock-rails'
