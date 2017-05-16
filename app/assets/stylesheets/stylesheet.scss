@@ -2,6 +2,13 @@
 @import "bootstrap";
 @import "lightbox-bootstrap";
 
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1600px;
+  padding: 0;
+}
+
 html, body {
   height:100%;
 }
@@ -254,12 +261,44 @@ section{
 .signature-svg {
   position: absolute;
   padding-left: 15px;
-  top: 65px;
+  padding-right: 15px;
+  top: 150px;
   right: 0;
   bottom: 0;
   left: 0;
   margin: 0;
 }
+
+@media only screen
+and (min-width : 992px) {
+  .signature-svg {
+    top: 30px;
+  }
+}
+
+@media only screen
+and (min-width : 1150px) {
+  .signature-svg {
+    top: 70px;
+  }
+}
+
+@media only screen
+and (min-width : 1400px) {
+  .signature-svg {
+    top: 150px;
+  }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1023px)
+and (orientation : portrait) {
+  .signature-svg {
+    top: 300px;
+  }
+}
+
 
 .signature-path {
   stroke-dasharray: 59000;
