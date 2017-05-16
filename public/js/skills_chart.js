@@ -230,7 +230,13 @@ function displayDetails(d) {
 function defaultDetails() {
     d3.select("#skills-name").text("Skills & Tools");
     d3.select("#skills-years").text("");
-    d3.select("#skills-description").text("Click any tile to zoom in and click the center to zoom out.");
+    d3.select("#skills-description").html(
+    "<br><i class='fa fa-chevron-circle-left fa-lg' aria-hidden='true'></i>"+
+    " Click any tile to zoom in."+
+    "<br><br><i class='fa fa-search-minus fa-lg' aria-hidden='true'></i>"+
+    " Click the center to zoom out."+
+    "<br><br><i class='fa fa-hand-o-up fa-lg' aria-hidden='true'></i>"+
+    " Hover for more details.");
 }
 
 function mouseOver(d) {

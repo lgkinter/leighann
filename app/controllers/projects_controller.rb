@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
 
   def index
     @contact = Contact.new
-    @projects = Project.all
+    @projects = Project.order("id DESC").all
   end
 
   def new
