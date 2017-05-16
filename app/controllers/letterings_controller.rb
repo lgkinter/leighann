@@ -38,7 +38,7 @@ class LetteringsController < ApplicationController
   private
 
     def lettering_params
-      params.require(:lettering).permit(:name, :image)
+      params.require(:lettering).permit(:id, :name, :image)
     end
 
 end
