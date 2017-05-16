@@ -2,7 +2,7 @@
   <% @letterings.each do |lettering| %>
     <div class="col-md-4 col-sm-6 col-xs-12 grid-item" id="lettering-<%= lettering.id %>">
       <div class="lettering_pic">
-        <%= link_to image_tag(lettering.image.url), lettering.image.url,  data: {toggle: "lightbox", gallery: "lettering"}, alt:lettering.image.url[(lettering.image.url.rindex('/') + 1)..-1].gsub(".jpg", "").gsub("-", " ") %>
+        <%= link_to image_tag(lettering.image.url), lettering.image.url,  data: {toggle: "lightbox", gallery: "lettering", footer:lettering.name }, alt:lettering.image.url[(lettering.image.url.rindex('/') + 1)..-1].gsub(".jpg", "").gsub("-", " ") %>
       </div>
   </div>
   <% end %>

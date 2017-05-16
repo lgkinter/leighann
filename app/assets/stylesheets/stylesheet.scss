@@ -798,6 +798,18 @@ a img {
           transition-duration: 0s;
 }
 
+.modal-body {
+  padding: 0;
+}
+.modal-footer {
+  color: #505050;
+  text-align: center;
+  font-weight: bold;
+  background-color: #DCDCDC;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
 /* ===================================
     Project Page
 ====================================== */
