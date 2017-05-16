@@ -78,7 +78,6 @@ $(document).ready(function(){
       y: '-=5',
       scale:1.2
     });
-    TweenMax.to($('.left-flower-img'), 0.3, { opacity:1 });
     TweenMax.to($('.left-flower-fill'), 0.3, { opacity:0 });
     TweenMax.to($('.left-flower-top'), 0.3, {
       stroke: '#4d173c',
@@ -99,8 +98,7 @@ $(document).ready(function(){
       strokeWidth: 15
     });
     TweenMax.to($('.left-flower-bottom'), 0.3, { stroke: '#fff' });
-    TweenMax.to($('.left-flower-img'), 0.3, { opacity:0 });
-    TweenMax.to($('.left-flower-fill'), 0, { opacity:1 });
+    TweenMax.to($('.left-flower-fill'), 0, { opacity:0.6 });
   };
 
   $("#middle-flower").hover(mid_over, mid_out);
@@ -111,7 +109,6 @@ $(document).ready(function(){
       x: '+=50',
       scale:1.2
     });
-    TweenMax.to($('.middle-flower-img'), 0.3, { opacity:1 });
     TweenMax.to($('.middle-flower-fill'), 0.3, { opacity:0 });
     TweenMax.to($('.middle-flower-top'), 0.3, {
       stroke: '#4d173c',
@@ -131,8 +128,7 @@ $(document).ready(function(){
       strokeWidth: 15
     });
     TweenMax.to($('.middle-flower-bottom'), 0.3, { stroke: '#fff' });
-    TweenMax.to($('.middle-flower-img'), 0.3, { opacity:0 });
-    TweenMax.to($('.middle-flower-fill'), 0, { opacity:1 });
+    TweenMax.to($('.middle-flower-fill'), 0, { opacity:0.4 });
   };
 
   $("#right-flower").hover(right_over, right_out);
@@ -144,7 +140,6 @@ $(document).ready(function(){
       y: '-=50',
       scale:1.2
     });
-    TweenMax.to($('.right-flower-img'), 0.3, { opacity:1 });
     TweenMax.to($('.right-flower-fill'), 0.3, { opacity:0 });
     TweenMax.to($('.right-flower-top'), 0.3, {
       stroke: '#4d173c',
@@ -165,8 +160,7 @@ $(document).ready(function(){
       strokeWidth: 15
     });
     TweenMax.to($('.right-flower-bottom'), 0.3, { stroke: '#fff' });
-    TweenMax.to($('.right-flower-img'), 0.3, { opacity:0 });
-    TweenMax.to($('.right-flower-fill'), 0, { opacity:1 });
+    TweenMax.to($('.right-flower-fill'), 0, { opacity:0.25 });
   };
 
 
