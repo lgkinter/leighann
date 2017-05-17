@@ -308,6 +308,10 @@ and (orientation : portrait) {
   stroke-dasharray: 25000;
 }
 
+.leaves {
+  opacity: 0.75;
+}
+
 .left-flower-fill, .middle-flower-fill {
   opacity: 0.5;
   fill: #A41545;
