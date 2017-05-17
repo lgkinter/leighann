@@ -224,14 +224,14 @@ function getAncestors(node) {
 function displayDetails(d) {
     d3.select("#skills-name").text(d.depth == 3 ? d.parent.name : d.name);
     d3.select("#skills-years").text(d.depth == 3 ? d.parent.years : d.years);
-    d3.select("#skills-description").text(d.depth == 3 ? d.parent.description : d.description);
+    d3.select("#skills-description").html(d.depth == 3 ? d.parent.description : d.description);
 }
 
 function defaultDetails() {
     d3.select("#skills-name").text("Skills & Tools");
     d3.select("#skills-years").text("");
     d3.select("#skills-description").html(
-    "<br><i class='fa fa-chevron-circle-left fa-lg' aria-hidden='true'></i>"+
+    "<i class='fa fa-chevron-circle-left fa-lg' aria-hidden='true'></i>"+
     " Click any tile to zoom in."+
     "<br><br><i class='fa fa-search-minus fa-lg' aria-hidden='true'></i>"+
     " Click the center to zoom out."+
@@ -265,23 +265,23 @@ function mouseOut(d) {
 function colors(d) {
 
     if (d.depth == 1) {
-      if (d.name == "Management & Comm...") //Investor owned
+      if (d.name == "Management & Communications") //Investor owned
           return "#A41545";
-      if (d.name == "Knowledge") //Nation states
+      if (d.name == "Mathematics & Data") //Nation states
           return "#074F57";
       if (d.name == "Technical") //State owned
           return "#4D173C"; //BA7BA1
     } else if (d.depth == 2) {
-      if (d.parent && d.parent.name == "Management & Comm...")
+      if (d.parent && d.parent.name == "Management & Communications")
           return "#B43F66";
-      if (d.parent && d.parent.name == "Knowledge")
+      if (d.parent && d.parent.name == "Mathematics & Data")
           return "#346F75";
       if (d.parent && d.parent.name == "Technical")
           return "#6D415F";
     } else if (d.depth == 3) {
-      if (d.parent && d.parent.parent.name == "Management & Comm...")
+      if (d.parent && d.parent.parent.name == "Management & Communications")
           return "#C56A88";
-      if (d.parent && d.parent.parent.name == "Knowledge")
+      if (d.parent && d.parent.parent.name == "Mathematics & Data")
           return "#618F94";
       if (d.parent && d.parent.parent.name == "Technical")
           return "#8D6B82";

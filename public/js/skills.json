@@ -1,175 +1,224 @@
 {
- "name": "Skills",
+ "name": "Skills & Tools",
+ "description": "<i class='fa fa-chevron-circle-left fa-lg' aria-hidden='true'></i> Click any tile to zoom in. <br><br><i class='fa fa-search-minus fa-lg' aria-hidden='true'></i> Click the center to zoom out. <br><br><i class='fa fa-hand-o-up fa-lg' aria-hidden='true'></i> Hover for more details.",
  "children": [
   {
-   "name": "Management & Comm...",
+   "name": "Management & Communications",
+   "description": "Project Management<br class='extra-space'>Client Management<br class='extra-space'>People Management<br class='extra-space'>Public Speaking",
    "children": [
      {
       "name": "Public Speaking",
-      "description": "Traveled to various client offices across the US to present to employees about their retirement and equity plans as well as savings strategies",
+      "description": "Traveled to various client offices across the US, presenting to groups of employees about their retirement and equity plans as well as savings strategies",
       "years": "2015 - 2016",
       "size": 50
      },
     {
      "name": "Project Management",
-     "description": "Managed large (up to $1M) custom web application projects, such as total rewards and wealth accumulation statements, retirement projection tools and financial transactional sites",
+     "description": "Managed large (up to $1M) custom web application projects, such as total benefits and wealth accumulation statements, retirement projection tools and financial transactional sites",
      "years": "2008 - 2016",
-     "size": 450
+     "size": 400
     },
     {
      "name": "Client Management",
-     "description": "Served as the primary point of contact for multiple client relationships, listening to the current initiatives and challenges faced by our clients and discussed strategic and demographic implications related to the plan redesign, strategy, administration and financing of their employee benefit programs",
+     "description": "Served as the primary point of contact for multiple client relationships<br class='extra-space'>Listened to the current challenges faced by our clients and discussed strategic and demographic implications related to the plan design, administrative and financial changes to their employee benefit programs",
      "years": "2008 - 2016",
-     "size": 300
+     "size": 250
     },
     {
      "name": "People Management",
+     "description": "Managed the staffing of all projects across our East Coast regional offices<br class='extra-space'>Met with direct reports monthly to discuss performance, workload management and career development<br class='extra-space'>Directed recruitment efforts, conducted interviews and presenting at colleges and career fairs",
      "children": [
       {
         "name": "Staffing",
         "description": "Managed the staffing of all projects across our East Coast regional offices: Boston, New York and Raleigh",
         "years": "2014 - 2016",
-        "size": 150
+        "size": 100
       },
       {
         "name": "People Manager",
         "description": "Held monthly 1-on-1 meetings to discuss workload management, career development, educational goals and performance improvement",
         "years": "2014 - 2016",
-        "size": 75
+        "size": 50
       },
       {
         "name": "Recruitment",
         "description": "Supported leadership in attracting, developing and retaining talent by directing recruitment efforts, reviewing resumes and presenting at colleges and career fairs",
         "years": "2008 - 2016",
-        "size": 25
+        "size": 30
       }
      ]
     }]
   },
   {
-    "name": "Knowledge",
+    "name": "Mathematics & Data",
+    "description": "Mathematics<br class='extra-space'>Actuarial & Financial<br class='extra-space'>Data Analysis<br class='extra-space'>Machine Learning",
     "children": [
       {
        "name": "Mathematics",
-       "description": "Graduated with honors in mathematics",
+       "description": "Graduated with honors in pure mathematics with a focus on probability and statistics<br class='extra-space'>Awarded the Trinity College President’s Fellow for Mathematics in 2008, an award given to one senior in each department who demonstrates outstanding achievement, along with evidence of wide-ranging intellectual interests",
        "years": "2004 - 2008",
        "size": 167
       },
       {
         "name": "Actuarial & Financial",
-        "description": "Managed large (up to $1M) custom web application projects, such as total rewards and wealth accumulation statements, retirement projection tools and financial transactional sites",
+        "description": "Passed 5 actuarial exams in probability, financial mathematics & economics, life contingencies and actuarial models<br class='extra-space'>Conducted actuarial valuations and consulted on annual compliance, disclosure and funding requirements for pension and retiree medical plans",
         "years": "2008 - 2012",
         "size": 167
       },
       {
-       "name": "Data Anaylses",
-       "description": "Performed data analyses and retirement plan adequacy studies",
-       "years": "2008 - 2016",
-       "size": 167
-      },
-      {
-       "name": "Full Stack Web Development",
-       "description": "Self studied Ruby on Rails",
-       "years": "2016 - 2017",
+       "name": "Data Anaylsis",
+       "description": "Analyzed retirement and health care plan data to assess plan adequacy and employee utilization<br class='extra-space'>Wrangle data for data visualizations using tools such as Python",
+       "years": "2008 - 2017",
        "size": 167
       },
       {
        "name": "Machine Learning",
-       "description": "Self studied Machine Learning",
-       "years": "2016 - 2017",
-       "size": 167
-      },
-      {
-       "name": "Data Visualization",
-       "description": "Self studied Data Visualization",
+       "description": "Self-studied machine learning using Octave and Python libraries like scikit-learn<br class='extra-space'>Experimented with supervised learning algorithms, such as linear regression, logistic regression, neural networks, SVMs, naive bayes and k-nearest neighbors, as well as unsupervised algorithms, such as k-means clustering and PCA",
        "years": "2016 - 2017",
        "size": 167
       }]
   },
   {
     "name": "Technical",
+    "description": "Front- and Back-End Web Development<br class='extra-space'>Data Visualization<br class='extra-space'>Graphic Design<br class='extra-space'>Animation<br class='extra-space'>Python<br class='extra-space'>Advanced Microsoft Office",
     "children": [
       {
-       "name": "Frontend Web",
+       "name": "Front-End Web",
+       "description": "Design the front-end of web applications using HTML, CSS and JavaScript",
+       "years": "2015 - 2017",
        "children": [
          {
-          "name": "HTML",
+          "name": "jQuery",
           "description": "TBD",
-          "years": "2015 - 2017",
-          "size": 30
-         },
-         {
-          "name": "CSS",
-          "description": "TBD",
-          "years": "2015 - 2017",
-          "size": 30
+          "years": "2016 - 2017",
+          "size": 40
          },
          {
           "name": "JavaScript",
           "description": "TBD",
           "years": "2016 - 2017",
-          "size": 30
+          "size": 40
          },
          {
-          "name": "jQuery",
+          "name": "CSS",
           "description": "TBD",
-          "years": "2016 - 2017",
-          "size": 30
+          "years": "2015 - 2017",
+          "size": 40
          },
          {
-          "name": "SVG Animation",
+          "name": "HTML",
           "description": "TBD",
-          "years": "2016 - 2017",
-          "size": 30
+          "years": "2015 - 2017",
+          "size": 40
          }]
       },
       {
-       "name": "Backend Web",
+       "name": "Back-End Web",
+       "description": "Develop web applications using the Ruby on Rails platform",
+       "years": "2016 - 2017",
        "children": [
-         {
-          "name": "Ruby on Rails",
-          "description": "TBD",
-          "years": "2016 - 2017",
-          "size": 120
-         },
          {
           "name": "SQL",
           "description": "TBD",
           "years": "2016 - 2017",
-          "size": 30
+          "size": 40
+        },
+         {
+          "name": "Ruby on Rails",
+          "description": "TBD",
+          "years": "2016 - 2017",
+          "size": 160
          }]
       },
       {
        "name": "Data Visualization",
+       "description": "Create interactive online data visualizations (like this one!) using D3.js, a JavaScript library that manipulates HTML, CSS and SVGs based on data",
+       "years": "2016 - 2017",
        "children": [
          {
           "name": "D3.js",
           "description": "TBD",
           "years": "2016 - 2017",
-          "size": 120
-         },
+          "size": 160
+         }]
+      },
+      {
+       "name": "Graphic Design",
+       "description": "Create logos, typography and other vector art using Illustrator or Inkscape<br class='extra-space'>Edit and enhance photographs and images using Photoshop and Gimp",
+       "years": "2016 - 2017",
+       "children": [
          {
-          "name": "Dimple.js",
+          "name": "Photoshop Gimp",
           "description": "TBD",
           "years": "2016 - 2017",
-          "size": 30
+          "size": 60
+         },
+         {
+          "name": "Illustrator Inkscape",
+          "description": "TBD",
+          "years": "2016 - 2017",
+          "size": 60
+         }]
+      },
+      {
+       "name": "Animation",
+       "description": "Animate Scalable Vector Graphics (SVGs) using CSS and Greensock's Animation Platform (GSAP), a JavaScript library",
+       "years": "2016 - 2017",
+       "children": [
+         {
+          "name": "CSS",
+          "description": "TBD",
+          "years": "2016 - 2017",
+          "size": 40
+         },
+         {
+          "name": "GSAP",
+          "description": "Greensock's Animation Platform (GSAP)",
+          "years": "2016 - 2017",
+          "size": 40
          }]
       },
       {
        "name": "Python",
+       "description": "Program in Python utilizing various libraries for computation (numpy), data analysis (pandas) and machine learning (scikit-learn)",
+       "years": "2016 - 2017",
        "children": [
          {
-          "name": "numpy",
-          "description": "TBD",
+          "name": "scikit-learn",
+          "description": "Machine Learning library",
           "years": "2016 - 2017",
-          "size": 120
+          "size": 40
+         },
+         {
+          "name": "numpy",
+          "description": "Scientific computing library",
+          "years": "2016 - 2017",
+          "size": 40
          },
          {
           "name": "pandas",
-          "description": "TBD",
+          "description": "Data analysis library",
           "years": "2016 - 2017",
-          "size": 30
+          "size": 40
          }]
-      }]
-  }]
+       },
+       {
+        "name": "Advanced Microsoft",
+        "description": "Create Excel Macros in VBA to automate tasks in spreadsheets<br class='extra-space'>Developed custom database applications within Access",
+        "years": "2008 - 2016",
+        "children": [
+          {
+           "name": "Excel VBA",
+           "description": "TBD",
+           "years": "2008 - 2016",
+           "size": 60
+          },
+          {
+           "name": "Access",
+           "description": "TBD",
+           "years": "2008 - 2016",
+           "size": 60
+         }]
+        }]
+    }]
 }

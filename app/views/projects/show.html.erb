@@ -8,7 +8,7 @@
         <div class="container no-padding">
             <div class="row">
                 <div class="logo col-md-1 col-sm-1 col-xs-6 no-padding" id="logo-link">
-                  <%=link_to root_path do %>
+                  <%=link_to root_path, method: :get do %>
                     <svg xmlns="http://www.w3.org/2000/svg" width="90px" height="90px" viewBox="0 0 2475.8938 3034.8607" style="padding-top: 6px">
 
                       <g class="logo-background-group" fill="none" fill-rule="evenodd" transform="translate(285.918 682.657)">
@@ -55,7 +55,7 @@
       <h4 class="project-subtitle text-center"><%= @project.subtitle %></h4>
     </div>
     <div class="row">
-      <div class="col-md-8">
+      <div id="profile-images" class="col-md-8">
         <% if @project.slug == 'lettering' %>
           <%= render partial: '/letterings/lettering' %>
         <% elsif !@project.profile_pics.empty? %>

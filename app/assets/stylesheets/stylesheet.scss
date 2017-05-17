@@ -638,15 +638,22 @@ label.error {
 
 #skills-name {
   text-transform: uppercase;
+  line-height: 1.5em;
 }
 
 #skills-years {
   font-size: 16px;
   font-style: italic;
+
 }
 
 #skills-hr {
-  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.extra-space {
+  margin-bottom: 15px;
 }
 
 #skills-description {
@@ -793,6 +800,10 @@ text {
   font-size: 12px;
   margin: 10px 5px 0 5px;
   font-weight: 700;
+}
+
+#profile-images {
+  margin-top: 15px;
 }
 
 a img {
