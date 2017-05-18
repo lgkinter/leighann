@@ -628,7 +628,7 @@ label.error {
 
 #skills-info {
   width: 85%;
-  height: 400px;
+  min-height: 400px;
   margin-top: 150px;
   background: rgba(77,23,60,1);
   padding: 20px;
@@ -653,7 +653,7 @@ label.error {
 }
 
 .extra-space {
-  margin-bottom: 15px;
+  line-height: 2.5em;
 }
 
 #skills-description {
