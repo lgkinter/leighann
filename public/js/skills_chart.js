@@ -265,21 +265,21 @@ function mouseOut(d) {
 function colors(d) {
 
     if (d.depth == 1) {
-      if (d.name == "Management & Communications") //Investor owned
+      if (d.name == "Management     & Communications") //Investor owned
           return "#A41545";
       if (d.name == "Mathematics & Data") //Nation states
           return "#074F57";
       if (d.name == "Technical") //State owned
           return "#4D173C"; //BA7BA1
     } else if (d.depth == 2) {
-      if (d.parent && d.parent.name == "Management & Communications")
+      if (d.parent && d.parent.name == "Management     & Communications")
           return "#B43F66";
       if (d.parent && d.parent.name == "Mathematics & Data")
           return "#346F75";
       if (d.parent && d.parent.name == "Technical")
           return "#6D415F";
     } else if (d.depth == 3) {
-      if (d.parent && d.parent.parent.name == "Management & Communications")
+      if (d.parent && d.parent.parent.name == "Management     & Communications")
           return "#C56A88";
       if (d.parent && d.parent.parent.name == "Mathematics & Data")
           return "#618F94";

@@ -3,8 +3,8 @@
  "description": "<i class='fa fa-chevron-circle-left fa-lg' aria-hidden='true'></i> Click any tile to zoom in. <br><br><i class='fa fa-search-minus fa-lg' aria-hidden='true'></i> Click the center to zoom out. <br><br><i class='fa fa-hand-o-up fa-lg' aria-hidden='true'></i> Hover for more details.",
  "children": [
   {
-   "name": "Management & Communications",
-   "description": "Project Management<br class='extra-space'>Client Management<br class='extra-space'>People Management<br class='extra-space'>Public Speaking",
+   "name": "Management     & Communications",
+   "description": "Project Management</p><p class='skills-list'>Client Management</p><p class='skills-list'>People Management</p><p class='skills-list'>Public Speaking",
    "children": [
      {
       "name": "Public Speaking",
@@ -20,13 +20,13 @@
     },
     {
      "name": "Client Management",
-     "description": "Served as the primary point of contact for multiple client relationships<br class='extra-space'>Listened to the current challenges faced by our clients and discussed strategic and demographic implications related to the plan design, administrative and financial changes to their employee benefit programs",
+     "description": "Served as the primary point of contact for multiple client relationships</p><p class='skills-list'>Listened to the current challenges faced by our clients and discussed strategic and demographic implications related to the plan design, administrative and financial changes to their employee benefit programs",
      "years": "2008 - 2016",
      "size": 250
     },
     {
      "name": "People Management",
-     "description": "Managed the staffing of all projects across our East Coast regional offices<br class='extra-space'>Met with direct reports monthly to discuss performance, workload management and career development<br class='extra-space'>Directed recruitment efforts, conducted interviews and presenting at colleges and career fairs",
+     "description": "Managed the staffing of all projects across our East Coast regional offices</p><p class='skills-list'>Met with direct reports monthly to discuss performance, workload management and career development</p><p class='skills-list'>Directed recruitment efforts, conducted interviews and presenting at colleges and career fairs",
      "children": [
       {
         "name": "Staffing",
@@ -51,36 +51,36 @@
   },
   {
     "name": "Mathematics & Data",
-    "description": "Mathematics<br class='extra-space'>Actuarial & Financial<br class='extra-space'>Data Analysis<br class='extra-space'>Machine Learning",
+    "description": "<p class='skills-list'>Mathematics</p><p class='skills-list'>Actuarial & Financial</p><p class='skills-list'>Data Analysis</p><p class='skills-list'>Machine Learning</p>",
     "children": [
       {
        "name": "Mathematics",
-       "description": "Graduated with honors in pure mathematics with a focus on probability and statistics<br class='extra-space'>Awarded the Trinity College President’s Fellow for Mathematics in 2008, an award given to one senior in each department who demonstrates outstanding achievement, along with evidence of wide-ranging intellectual interests",
+       "description": "<p class='skills-list'>Graduated with honors in pure mathematics with a focus on probability and statistics</p><p class='skills-list'>Awarded the Trinity College President’s Fellow for Mathematics in 2008, an award given to one senior in each department who demonstrates outstanding achievement, along with evidence of wide-ranging intellectual interests</p>",
        "years": "2004 - 2008",
        "size": 167
       },
       {
         "name": "Actuarial & Financial",
-        "description": "Passed 5 actuarial exams in probability, financial mathematics & economics, life contingencies and actuarial models<br class='extra-space'>Conducted actuarial valuations and consulted on annual compliance, disclosure and funding requirements for pension and retiree medical plans",
+        "description": "<p class='skills-list'>Passed 5 actuarial exams in probability, financial mathematics & economics, life contingencies and actuarial models</p><p class='skills-list'>Conducted actuarial valuations and consulted on annual compliance, disclosure and funding requirements for pension and retiree medical plans</p>",
         "years": "2008 - 2012",
         "size": 167
       },
       {
        "name": "Data Anaylsis",
-       "description": "Analyzed retirement and health care plan data to assess plan adequacy and employee utilization<br class='extra-space'>Wrangle data for data visualizations using tools such as Python",
+       "description": "<p class='skills-list'>Analyzed retirement and health care plan data to assess plan adequacy and employee utilization</p><p class='skills-list'>Wrangle data for data visualizations using tools such as Python</p>",
        "years": "2008 - 2017",
        "size": 167
       },
       {
        "name": "Machine Learning",
-       "description": "Self-studied machine learning using Octave and Python libraries like scikit-learn<br class='extra-space'>Experimented with supervised learning algorithms, such as linear regression, logistic regression, neural networks, SVMs, naive bayes and k-nearest neighbors, as well as unsupervised algorithms, such as k-means clustering and PCA",
+       "description": "<p class='skills-list'>Self-studied machine learning using Octave and Python libraries like scikit-learn</p><p class='skills-list'>Experimented with supervised learning algorithms, such as linear regression, logistic regression, neural networks, SVMs, naive bayes and k-nearest neighbors, as well as unsupervised algorithms, such as k-means clustering and PCA</p>",
        "years": "2016 - 2017",
        "size": 167
       }]
   },
   {
     "name": "Technical",
-    "description": "Front- and Back-End Web Development<br class='extra-space'>Data Visualization<br class='extra-space'>Graphic Design<br class='extra-space'>Animation<br class='extra-space'>Python<br class='extra-space'>Advanced Microsoft Office",
+    "description": "<p class='skills-list'>Front- and Back-End Web Development</p><p class='skills-list'>Data Visualization</p><p class='skills-list'>Graphic Design</p><p class='skills-list'>Animation</p><p class='skills-list'>Python</p><p class='skills-list'>Advanced Microsoft Office</p>",
     "children": [
       {
        "name": "Front-End Web",
@@ -144,7 +144,7 @@
       },
       {
        "name": "Graphic Design",
-       "description": "Create logos, typography and other vector art using Illustrator or Inkscape<br class='extra-space'>Edit and enhance photographs and images using Photoshop and Gimp",
+       "description": "<p class='skills-list'>Create logos, typography and other vector art using Illustrator or Inkscape</p><p class='skills-list'>Edit and enhance photographs and images using Photoshop and Gimp</p>",
        "years": "2016 - 2017",
        "children": [
          {
@@ -204,7 +204,7 @@
        },
        {
         "name": "Advanced Microsoft",
-        "description": "Create Excel Macros in VBA to automate tasks in spreadsheets<br class='extra-space'>Developed custom database applications within Access",
+        "description": "<p class='skills-list'>Create Excel Macros in VBA to automate tasks in spreadsheets</p><p class='skills-list'>Developed custom database applications within Access</p>",
         "years": "2008 - 2016",
         "children": [
           {
