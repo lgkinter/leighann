@@ -42,6 +42,7 @@ gem 'fog', '~> 1.38.0'
 gem 'friendly_id', '~> 5.1.0'
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
 gem 'greensock-rails'
+gem 'figaro'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

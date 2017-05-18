@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.valid?
-      ContactMailer.contact_me(@contact).deliver_now
+      ContactMailer.contact_me(@contact).deliver
       respond_to do |format|
         format.js { render partial: 'contacts/thank_you'}
       end

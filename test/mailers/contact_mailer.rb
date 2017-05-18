@@ -10,7 +10,7 @@ class ContactMailerTest < ActionMailer::TestCase
     email = ContactMailer.contact_me(message)
 
     assert_emails 1 do
-      email.deliver_now
+      email.deliver
     end
 
     assert_equal 'Message from www.murdo.ch', email.subject

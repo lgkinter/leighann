@@ -7,6 +7,8 @@ class ContactMailer < ApplicationMailer
   #
   def contact_me(contact)
     @body = contact.message
+    @email = contact.email
+    @name = contact.name
 
     mail to: "leighann.kinter@gmail.com", from: contact.email
   end
