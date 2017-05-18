@@ -4,7 +4,7 @@
  "children": [
   {
    "name": "Management     & Communications",
-   "description": "Project Management</p><p class='skills-list'>Client Management</p><p class='skills-list'>People Management</p><p class='skills-list'>Public Speaking",
+   "description": "<p class='skills-list'>Project Management</p><p class='skills-list'>Client Management</p><p class='skills-list'>People Management</p><p class='skills-list'>Public Speaking</p>",
    "children": [
      {
       "name": "Public Speaking",
@@ -20,13 +20,13 @@
     },
     {
      "name": "Client Management",
-     "description": "Served as the primary point of contact for multiple client relationships</p><p class='skills-list'>Listened to the current challenges faced by our clients and discussed strategic and demographic implications related to the plan design, administrative and financial changes to their employee benefit programs",
+     "description": "<p class='skills-list'>Served as the primary point of contact for multiple client relationships</p><p class='skills-list'>Listened to the current challenges faced by our clients and discussed strategic and demographic implications related to the plan design, administrative and financial changes to their employee benefit programs</p>",
      "years": "2008 - 2016",
      "size": 250
     },
     {
      "name": "People Management",
-     "description": "Managed the staffing of all projects across our East Coast regional offices</p><p class='skills-list'>Met with direct reports monthly to discuss performance, workload management and career development</p><p class='skills-list'>Directed recruitment efforts, conducted interviews and presenting at colleges and career fairs",
+     "description": "<p class='skills-list'>Managed the staffing of all projects across our East Coast regional offices</p><p class='skills-list'>Met with direct reports monthly to discuss performance, workload management and career development</p><p class='skills-list'>Directed recruitment efforts, conducted interviews and presenting at colleges and career fairs</p>",
      "children": [
       {
         "name": "Staffing",
