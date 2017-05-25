@@ -6,6 +6,5 @@ Rails.application.routes.draw do
   resources :letterings
   resources :contacts, only: [:new, :create]
   get "/smallbusiness" => "projects#sbed"
-
   root 'projects#index'
 end

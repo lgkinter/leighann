@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show, :sbed]
+  before_action :authenticate_user!, except: [:index, :show, :sbed, :lettering]
 
   def index
     @contact = Contact.new
@@ -47,6 +47,7 @@ class ProjectsController < ApplicationController
 
   def sbed
   end
+
 
   private
 
