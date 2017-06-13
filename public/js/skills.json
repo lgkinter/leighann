@@ -122,7 +122,7 @@
           "description": "TBD",
           "years": "2016 - 2017",
           "size": 40
-        },
+          },
          {
           "name": "Ruby on Rails",
           "description": "TBD",
@@ -132,14 +132,20 @@
       },
       {
        "name": "Data Visualization",
-       "description": "Create interactive online data visualizations (like this one!) using D3.js, a JavaScript library that manipulates HTML, CSS and SVGs based on data",
+       "description": "Create interactive online data visualizations (like this one) using D3.js, a JavaScript library that manipulates HTML, CSS and SVGs based on data, and Tableau",
        "years": "2016 - 2017",
        "children": [
          {
           "name": "D3.js",
           "description": "TBD",
           "years": "2016 - 2017",
-          "size": 160
+          "size": 100
+         },
+         {
+          "name": "Tableau",
+          "description": "TBD",
+          "years": "2016 - 2017",
+          "size": 60
          }]
       },
       {
